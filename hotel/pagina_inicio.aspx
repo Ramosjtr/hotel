@@ -25,7 +25,7 @@
 </header>
 	<div class="ancho-letras">
 		<div class="letras-slider">
-			<h1 class="animated zoomIn">Bienvenidos</h1>
+			<h1 class="animated zoomIn">cambio de sergio isem</h1>
 			<p class="animated slideInUp">El hotel Las Golondrinas dispone de 50 habitaciones amplias, baño, ademas tiene una decoración elegante y cómoda.</p>
 		</div>
 	</div>
