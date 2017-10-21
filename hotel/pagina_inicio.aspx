@@ -10,11 +10,11 @@
 <header>
 	<div class="ancho">
 		<div class="logo">
-			<p><a href="#">Hotel Las Golondrinas</a></p>
+			<p><a href="#">hice un cambio aca verificar</a></p>
 		</div>
 		<nav>
 			<ul>				
-			<li><a href="index.html">Inicio</a></li>
+			<li><a href="index.html">jajajaja</a></li>
 				<li><a href="somos.html">Quiénes somos</a></li>
 				<li><a href="eventos.html">Eventos</a></li>
 				<li><a href="ofertas.html">Ofertas</a></li>
