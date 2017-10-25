@@ -179,22 +179,40 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Modulo_clientes.aspx" />
+    <Content Include="Admin\Modulo_evento.aspx" />
+    <Content Include="Admin\Modulo_habitaciones.aspx" />
+    <Content Include="Admin\Modulo_paquetes.aspx" />
+    <Content Include="Admin\Modulo_reservaciones.aspx" />
+    <Content Include="Admin\Modulo_servicios.aspx" />
+    <Content Include="Admin\Modulo_usuarios.aspx" />
+    <Content Include="Admin\principal.aspx" />
+    <Content Include="Content\AdminLTE.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\skin-blue.min.css" />
+    <Content Include="Content\style_login.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\admin.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="pagina_inicio.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="Scripts\adminlte.min.js" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\particles.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\stats.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -230,10 +248,80 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\admin.Master.designer.vb">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin.Master.vb">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Modulo_clientes.aspx.designer.vb">
+      <DependentUpon>Modulo_clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_clientes.aspx.vb">
+      <DependentUpon>Modulo_clientes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Modulo_evento.aspx.designer.vb">
+      <DependentUpon>Modulo_evento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_evento.aspx.vb">
+      <DependentUpon>Modulo_evento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Modulo_habitaciones.aspx.designer.vb">
+      <DependentUpon>Modulo_habitaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_habitaciones.aspx.vb">
+      <DependentUpon>Modulo_habitaciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Modulo_paquetes.aspx.designer.vb">
+      <DependentUpon>Modulo_paquetes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_paquetes.aspx.vb">
+      <DependentUpon>Modulo_paquetes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Modulo_reservaciones.aspx.designer.vb">
+      <DependentUpon>Modulo_reservaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_reservaciones.aspx.vb">
+      <DependentUpon>Modulo_reservaciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Modulo_servicios.aspx.designer.vb">
+      <DependentUpon>Modulo_servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_servicios.aspx.vb">
+      <DependentUpon>Modulo_servicios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Modulo_usuarios.aspx.designer.vb">
+      <DependentUpon>Modulo_usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_usuarios.aspx.vb">
+      <DependentUpon>Modulo_usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\principal.aspx.designer.vb">
+      <DependentUpon>principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\principal.aspx.vb">
+      <DependentUpon>principal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\IdentityConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\Startup.Auth.vb" />
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Models\IdentityModels.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -253,13 +341,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="pagina_inicio.aspx.designer.vb">
-      <DependentUpon>pagina_inicio.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="pagina_inicio.aspx.vb">
-      <DependentUpon>pagina_inicio.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
