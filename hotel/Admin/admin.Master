@@ -58,7 +58,8 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="../../login.aspx"" class="btn btn-default btn-flat">Cerrar Sesion</a>
+                  <a href="../login.aspx"" class="btn btn-default btn-flat">Cerrar Sesion</a>
+                
                 </div>
               </li>
             </ul>

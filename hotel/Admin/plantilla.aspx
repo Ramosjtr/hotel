@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin/admin.Master" CodeBehind="Modulo_usuarios.aspx.vb" Inherits="hotel.Modulo_usuarios" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin/admin.Master" CodeBehind="plantilla.aspx.vb" Inherits="hotel.plantilla1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -7,7 +7,7 @@
 <div class="panel  panel-primary">
 <%--  <div class="panel-heading">Listado De Proveedores</div>--%>
       <div class="panel-heading">
-    <h3 class="panel-title">Gestionar Usuarios</h3>
+    <h3 class="panel-title">plantilla</h3>
   </div>
   <div class="panel-body">
  <asp:Label ID="Label2" runat="server" Text="buscar: "></asp:Label>

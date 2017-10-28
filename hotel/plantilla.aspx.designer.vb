@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Modulo_habitaciones
+Partial Public Class plantilla
     
     '''<summary>
     '''Control ScriptManager1.

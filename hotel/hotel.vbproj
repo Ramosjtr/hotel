@@ -186,6 +186,7 @@
     <Content Include="Admin\Modulo_reservaciones.aspx" />
     <Content Include="Admin\Modulo_servicios.aspx" />
     <Content Include="Admin\Modulo_usuarios.aspx" />
+    <Content Include="Admin\plantilla.aspx" />
     <Content Include="Admin\principal.aspx" />
     <Content Include="Content\AdminLTE.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -201,6 +202,7 @@
     <Content Include="Admin\admin.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="login.aspx" />
+    <Content Include="plantilla.aspx" />
     <Content Include="Scripts\adminlte.min.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -304,6 +306,13 @@
       <DependentUpon>Modulo_usuarios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Admin\plantilla.aspx.designer.vb">
+      <DependentUpon>plantilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\plantilla.aspx.vb">
+      <DependentUpon>plantilla.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Admin\principal.aspx.designer.vb">
       <DependentUpon>principal.aspx</DependentUpon>
     </Compile>
@@ -341,6 +350,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="plantilla.aspx.designer.vb">
+      <DependentUpon>plantilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="plantilla.aspx.vb">
+      <DependentUpon>plantilla.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
