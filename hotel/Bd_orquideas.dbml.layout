@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.25, 8.5" name="Bd_orquideas">
+  <DataContextMoniker Name="/Bd_orquideasDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a169fa50-7111-4a9e-a6df-c3fd5db2657c" isExpanded="false" absoluteBounds="0.5, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_servicio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="baa05fbd-2f15-4837-a2a2-f1019068aa85" absoluteBounds="0.51500000000000012, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9450b4d7-f626-465a-98a3-4bd33febb46f" isExpanded="false" absoluteBounds="3, 3.875, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_habitacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="234acdb7-6832-4eb6-8653-66e62b1c9012" absoluteBounds="3.015, 4.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4fd55a07-e0aa-4811-a248-a711e70ca0bf" isExpanded="false" absoluteBounds="2.875, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_paquete" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0986da81-075d-45bc-9c9d-6437ff3620b9" absoluteBounds="2.89, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="223d18ff-b7e2-4f86-84b5-895d4fc8ca19" isExpanded="false" absoluteBounds="2.75, 5.75, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_tipo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="facf8a19-fef6-4a9b-b534-bfb8c1806815" absoluteBounds="2.765, 6.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.01985413290113 : 5.75); (4.01985413290113 : 4.325)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_tipo/tb_tipo_tb_habitacion" />
+      <nodes>
+        <classShapeMoniker Id="223d18ff-b7e2-4f86-84b5-895d4fc8ca19" />
+        <classShapeMoniker Id="9450b4d7-f626-465a-98a3-4bd33febb46f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="aa6a9302-5379-4cff-93d0-46672b9e243a" isExpanded="false" absoluteBounds="8, 3.625, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_reservacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc91ce0e-2f4d-4b50-8f69-1d90634a54f5" absoluteBounds="8.015, 4.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 1.6); (8.84375 : 1.6); (8.84375 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_paquete/tb_paquete_tb_reservacion" />
+      <nodes>
+        <classShapeMoniker Id="4fd55a07-e0aa-4811-a248-a711e70ca0bf" />
+        <classShapeMoniker Id="aa6a9302-5379-4cff-93d0-46672b9e243a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2c21302a-dfb0-4e05-bea5-3d3072027f8e" isExpanded="false" absoluteBounds="10.875, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_reservacion_evento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6efec9b5-7cb2-4b4b-844a-2fd2c166e1aa" absoluteBounds="10.89, 3.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a86f500-017a-483b-9645-aa6b00364922" isExpanded="false" absoluteBounds="8.25, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_cliente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ad07aa0-09ed-4031-93f6-9b9ed4e0b070" absoluteBounds="8.265, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.296875 : 1.2); (9.296875 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_cliente/tb_cliente_tb_reservacion" />
+      <nodes>
+        <classShapeMoniker Id="7a86f500-017a-483b-9645-aa6b00364922" />
+        <classShapeMoniker Id="aa6a9302-5379-4cff-93d0-46672b9e243a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f63e23c1-22e6-46e1-99e4-dce70133b6ea" isExpanded="false" absoluteBounds="11.625, 4.125, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_detalle_evento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52869667-f87e-4b5d-92c4-ed6e0ef91f6e" absoluteBounds="11.64, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.25 : 3.075); (12.25 : 4.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_reservacion_evento/tb_reservacion_evento_tb_detalle_evento" />
+      <nodes>
+        <classShapeMoniker Id="2c21302a-dfb0-4e05-bea5-3d3072027f8e" />
+        <classShapeMoniker Id="f63e23c1-22e6-46e1-99e4-dce70133b6ea" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="23b8cafd-da68-4251-ab7a-d695b3f87b16" isExpanded="false" absoluteBounds="5.25, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_detalle_factura" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8ee494b-6a49-4d75-98a9-6ba712cfc29b" absoluteBounds="5.2650000000000006, 3.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 3.875); (4 : 3.6874995); (5.25 : 3.6874995)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_habitacion/tb_habitacion_tb_detalle_factura" />
+      <nodes>
+        <classShapeMoniker Id="9450b4d7-f626-465a-98a3-4bd33febb46f" />
+        <classShapeMoniker Id="23b8cafd-da68-4251-ab7a-d695b3f87b16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 3.7875); (7.25 : 3.7875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_reservacion/tb_reservacion_tb_detalle_factura" />
+      <nodes>
+        <classShapeMoniker Id="aa6a9302-5379-4cff-93d0-46672b9e243a" />
+        <classShapeMoniker Id="23b8cafd-da68-4251-ab7a-d695b3f87b16" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="35c43e56-77a4-4ff3-be63-3029bda7bf9e" isExpanded="false" absoluteBounds="10.5, 5.5, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_encabezado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67592bc9-5400-424a-bae6-df8c20922e49" absoluteBounds="10.515, 5.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.03125 : 5.5); (11.03125 : 3.85); (10 : 3.85)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_encabezado/tb_encabezado_tb_reservacion" />
+      <nodes>
+        <classShapeMoniker Id="35c43e56-77a4-4ff3-be63-3029bda7bf9e" />
+        <classShapeMoniker Id="aa6a9302-5379-4cff-93d0-46672b9e243a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.0625 : 5.5); (12.0625 : 4.575)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_encabezado/tb_encabezado_tb_detalle_evento" />
+      <nodes>
+        <classShapeMoniker Id="35c43e56-77a4-4ff3-be63-3029bda7bf9e" />
+        <classShapeMoniker Id="f63e23c1-22e6-46e1-99e4-dce70133b6ea" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="273a8f41-4463-4bbb-b544-880e4761a758" isExpanded="false" absoluteBounds="14, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_evento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f4b1c9ec-2cac-4e17-9ac9-edf1ea11fd56" absoluteBounds="14.015, 2.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14 : 2.7875); (12.875 : 2.7875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_evento/tb_evento_tb_reservacion_evento" />
+      <nodes>
+        <classShapeMoniker Id="273a8f41-4463-4bbb-b544-880e4761a758" />
+        <classShapeMoniker Id="2c21302a-dfb0-4e05-bea5-3d3072027f8e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5392d671-8b74-45c5-87b8-1185d6108959" isExpanded="false" absoluteBounds="11, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_salon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee088f6b-1aa8-418e-a13e-7facdb80db89" absoluteBounds="11.015, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.9375 : 1.575); (11.9375 : 2.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_salon/tb_salon_tb_reservacion_evento" />
+      <nodes>
+        <classShapeMoniker Id="5392d671-8b74-45c5-87b8-1185d6108959" />
+        <classShapeMoniker Id="2c21302a-dfb0-4e05-bea5-3d3072027f8e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6919eb7b-b708-468c-b89c-f9307d169e9f" isExpanded="false" absoluteBounds="9, 6.125, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_tarjeta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b41416e9-ad12-4c4d-ae9b-d853df33b4e5" absoluteBounds="9.015, 6.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.5 : 6.125); (9.5 : 4.075)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_tarjeta/tb_tarjeta_tb_reservacion" />
+      <nodes>
+        <classShapeMoniker Id="6919eb7b-b708-468c-b89c-f9307d169e9f" />
+        <classShapeMoniker Id="aa6a9302-5379-4cff-93d0-46672b9e243a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2971fa3f-cf7b-477c-a2c2-2fd09b0d3211" isExpanded="false" absoluteBounds="6.75, 6.125, 2, 0.45">
+      <DataClassMoniker Name="/Bd_orquideasDataContext/tb_usuarios" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff182f82-5dd9-4631-8913-cc47ba0600a6" absoluteBounds="6.765, 6.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 6.125); (8.375 : 4.075)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Bd_orquideasDataContext/tb_usuarios/tb_usuarios_tb_reservacion" />
+      <nodes>
+        <classShapeMoniker Id="2971fa3f-cf7b-477c-a2c2-2fd09b0d3211" />
+        <classShapeMoniker Id="aa6a9302-5379-4cff-93d0-46672b9e243a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

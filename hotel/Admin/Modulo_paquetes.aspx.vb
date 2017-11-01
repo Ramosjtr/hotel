@@ -5,4 +5,11 @@
 
     End Sub
 
+    Protected Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Button1_ModalPopupExtender.Show()
+    End Sub
+    Protected Sub button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Button1_ModalPopupExtender.Hide()
+    End Sub
+
 End Class
