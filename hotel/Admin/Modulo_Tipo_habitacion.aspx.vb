@@ -1,30 +1,31 @@
-﻿Public Class Modulo_usuarios
+﻿Public Class Modulo_Tipo_habitacion
     Inherits System.Web.UI.Page
-    Dim nuevo_usuario As New Bd_orquideasDataContext
-    Dim usuario As New tb_usuarios
+    Dim nuevo_tipo As New Bd_orquideasDataContext
+    Dim tipo As New tb_tipo
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
-    'abrir modal nuevo usuario
+    'abrir modal nuevo tipo
     Protected Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         Button1_ModalPopupExtender.Show()
     End Sub
-    'cerrar modal nuevo usuario
+    'cerrar modal nuevo tipo
     Protected Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Button1_ModalPopupExtender.Hide()
     End Sub
-    'ingreso de Datos a Bd
-    Protected Sub button5_click(sender As Object, e As EventArgs) Handles Button5.Click
-        With usuario
+    Protected Sub button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        With tipo
+            .codigo_Tipo = codigo.Text
             .nombre = nombre.Text
-            .contraseña = contraseña.Text
+            .cantidad_personas = cantidad_personas.Text
         End With
-        nuevo_usuario.tb_usuarios.InsertOnSubmit(usuario)
-        nuevo_usuario.SubmitChanges()
+        nuevo_tipo.tb_tipo.InsertOnSubmit(tipo)
+        nuevo_tipo.SubmitChanges()
+        codigo.Text = ""
         nombre.Text = ""
-        contraseña.Text = ""
+        cantidad_personas.Text = ""
         Button1_ModalPopupExtender.Hide()
         MsgBox("Guardado Correctamente")
-    End Sub
 
+    End Sub
 End Class

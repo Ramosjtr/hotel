@@ -34,7 +34,7 @@
             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                 <ContentTemplate>
                      <div class="modal-header">
-                          <h3 id="mymodallabel" style="margin-left: 250px;">Nuevo Cliente</h3>
+                          <h3 id="mymodallabel" style="margin-left: 250px;">Nuevo Usuario</h3>
                        </div>
                        <div class="modal-body">
                          <%--cuerpo del modal--%>
@@ -46,23 +46,11 @@
                                     </div>
                                  </div>   
                                    <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Apellido:</label>
+                                    <label  class="col-sm-4 control-label">Contraseña:</label>
                                     <div class="col-sm-8">
-                                            <asp:TextBox ID="apellido" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="contraseña" runat="server"></asp:TextBox>
                                     </div>
                                  </div> 
-                                      <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Nit:</label>
-                                    <div class="col-sm-8">
-                                           <asp:TextBox ID="nit" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div> 
-                                 <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Tipo De Cliente :</label>
-                                    <div class="col-sm-8">
-                                           <asp:TextBox ID="tipo" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div>
                             </div> 
                        </div>     
                        <div class="modal-footer">

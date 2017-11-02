@@ -122,31 +122,13 @@ Partial Public Class Modulo_usuarios
     Protected WithEvents nombre As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control apellido.
+    '''Control contraseña.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents apellido As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control nit.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents nit As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control tipo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents tipo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents contraseña As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Button4.

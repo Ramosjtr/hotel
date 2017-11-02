@@ -1,13 +1,14 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin/admin.Master" CodeBehind="Modulo_clientes.aspx.vb" Inherits="hotel.Modulo_clientes" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin/admin.Master" CodeBehind="Modulo_Tipo_habitacion.aspx.vb" Inherits="hotel.Modulo_Tipo_habitacion" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>      
+        <ContentTemplate>
+               
 <div class="panel  panel-primary">
-<%--  <div class="panel-heading">Listado De clientes</div>--%>
+<%--  <div class="panel-heading">Tipo De Habitaciones</div>--%>
       <div class="panel-heading">
-    <h3 class="panel-title">Modulo Clientes</h3>
+    <h3 class="panel-title">Tipo De Habitacion</h3>
   </div>
   <div class="panel-body">
  <asp:Label ID="Label2" runat="server" Text="buscar: "></asp:Label>
@@ -19,63 +20,44 @@
   </div>
     <ul class="list-group height:1px">
     <li class="list-group-item">
-        <!--aca va el Gridview-->
-        
+        <!--aca va el gridview-->
 
-
-     </li>
+        </li>
+        </ul>
     </div>
         </ContentTemplate>
     </asp:UpdatePanel>
-    <!--nuevo cliente-->
-    <asp:Button ID="Button11" runat="server" Text="Button" Style="display:none"/>
-        <ajaxToolkit:ModalPopupExtender ID="Button11_ModalPopupExtender" runat="server" BehaviorID="Button11_ModalPopupExtender" DynamicServicePath="" TargetControlID="Button11" BackgroundCssClass="modalbakground" PopupControlID="panel1">
+    <!--Nuevo Tipo De Habitacion-->
+    <asp:Button ID="Button1" runat="server" Text="Button" Style="display:none" />
+        <ajaxToolkit:ModalPopupExtender ID="Button1_ModalPopupExtender" runat="server" BehaviorID="Button1_ModalPopupExtender" DynamicServicePath="" TargetControlID="Button1" BackgroundCssClass="modalbakground" PopupControlID="panel1">
     </ajaxToolkit:ModalPopupExtender>
         <asp:Panel ID="Panel1" runat="server" style="display:none; background: white; Width:50%; height:auto">
             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                 <ContentTemplate>
                      <div class="modal-header">
-                          <h3 id="mymodallabel" style="margin-left: 250px;">Nuevo Cliente</h3>
+                          <h3 id="mymodallabel" style="margin-left: 250px;">Nuevo Tipo De Habitacion</h3>
                        </div>
                        <div class="modal-body">
                          <%--cuerpo del modal--%>
                             <div class="form-horizontal">
-                                 <div class="form-group">
+                                <div class="form-group">
                                     <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
                                    <asp:TextBox ID="codigo" runat="server"></asp:TextBox>
                                     </div>
                                  </div>   
-                                <div class="form-group">
+                                   <div class="form-group">
                                     <label  class="col-sm-4 control-label">Nombre:</label>
                                     <div class="col-sm-8">
-                                   <asp:TextBox ID="nombre" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div>   
-                                   <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Apellido:</label>
-                                    <div class="col-sm-8">
-                                            <asp:TextBox ID="apellido" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="nombre" runat="server"></asp:TextBox>
                                     </div>
                                  </div> 
                                       <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Direccion:</label>
+                                    <label  class="col-sm-4 control-label">Cantidad De Personas:</label>
                                     <div class="col-sm-8">
-                                           <asp:TextBox ID="direccion" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="cantidad_personas" runat="server"></asp:TextBox>
                                     </div>
                                  </div> 
-                                 <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Telefono:</label>
-                                    <div class="col-sm-8">
-                                           <asp:TextBox ID="telefono" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div>
-                                 <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Correo:</label>
-                                    <div class="col-sm-8">
-                                           <asp:TextBox ID="correo" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div>
                             </div> 
                        </div>     
                        <div class="modal-footer">
@@ -88,9 +70,6 @@
     
 
  
-    
 
  
-    
-    </asp:Content>
-
+</asp:Content>

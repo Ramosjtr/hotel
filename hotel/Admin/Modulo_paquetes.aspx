@@ -40,27 +40,21 @@
                          <%--cuerpo del modal--%>
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Nombre:</label>
+                                    <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
-                                   <asp:TextBox ID="nombre" runat="server"></asp:TextBox>
+                                   <asp:TextBox ID="codigo" runat="server"></asp:TextBox>
                                     </div>
                                  </div>   
                                    <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Apellido:</label>
+                                    <label  class="col-sm-4 control-label">Nombre:</label>
                                     <div class="col-sm-8">
-                                            <asp:TextBox ID="apellido" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="nombre" runat="server"></asp:TextBox>
                                     </div>
                                  </div> 
                                       <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Nit:</label>
+                                    <label  class="col-sm-4 control-label">Costo:</label>
                                     <div class="col-sm-8">
-                                           <asp:TextBox ID="nit" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div> 
-                                 <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Tipo De Cliente :</label>
-                                    <div class="col-sm-8">
-                                           <asp:TextBox ID="tipo" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="costo" runat="server"></asp:TextBox>
                                     </div>
                                  </div>
                             </div> 

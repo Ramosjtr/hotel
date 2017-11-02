@@ -1,30 +1,31 @@
-﻿Public Class Modulo_usuarios
+﻿Public Class Modulo_salon
     Inherits System.Web.UI.Page
-    Dim nuevo_usuario As New Bd_orquideasDataContext
-    Dim usuario As New tb_usuarios
+    Dim nuevo_salon As New Bd_orquideasDataContext
+    Dim salon As New tb_salon
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
-    'abrir modal nuevo usuario
+    'abre modal de nuevo salon
     Protected Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         Button1_ModalPopupExtender.Show()
     End Sub
-    'cerrar modal nuevo usuario
-    Protected Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    'cierra modal de nuevo salon
+    Protected Sub button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Button1_ModalPopupExtender.Hide()
     End Sub
-    'ingreso de Datos a Bd
+    'ingreso de datos a la Bd
     Protected Sub button5_click(sender As Object, e As EventArgs) Handles Button5.Click
-        With usuario
+        With salon
+            .codigo_salon = codigo.Text
             .nombre = nombre.Text
-            .contraseña = contraseña.Text
+            .estado = estado.Text
         End With
-        nuevo_usuario.tb_usuarios.InsertOnSubmit(usuario)
-        nuevo_usuario.SubmitChanges()
+        nuevo_salon.tb_salon.InsertOnSubmit(salon)
+        nuevo_salon.SubmitChanges()
+        codigo.Text = ""
         nombre.Text = ""
-        contraseña.Text = ""
+        estado.Text = ""
         Button1_ModalPopupExtender.Hide()
         MsgBox("Guardado Correctamente")
     End Sub
-
 End Class

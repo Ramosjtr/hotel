@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Modulo_clientes
+Partial Public Class Modulo_tarjeta
     
     '''<summary>
     '''Control ScriptManager1.
@@ -77,22 +77,22 @@ Partial Public Class Modulo_clientes
     Protected WithEvents Button9 As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control Button11.
+    '''Control Button1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button11 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control Button11_ModalPopupExtender.
+    '''Control Button1_ModalPopupExtender.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button11_ModalPopupExtender As Global.AjaxControlToolkit.ModalPopupExtender
+    Protected WithEvents Button1_ModalPopupExtender As Global.AjaxControlToolkit.ModalPopupExtender
     
     '''<summary>
     '''Control Panel1.
@@ -113,6 +113,15 @@ Partial Public Class Modulo_clientes
     Protected WithEvents UpdatePanel2 As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
+    '''Control titular.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents titular As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Control codigo.
     '''</summary>
     '''<remarks>
@@ -120,51 +129,6 @@ Partial Public Class Modulo_clientes
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents codigo As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control nombre.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents nombre As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control apellido.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents apellido As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control direccion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents direccion As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control telefono.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents telefono As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control correo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents correo As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Button4.

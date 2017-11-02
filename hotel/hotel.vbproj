@@ -189,7 +189,10 @@
     <Content Include="Admin\Modulo_habitaciones.aspx" />
     <Content Include="Admin\Modulo_paquetes.aspx" />
     <Content Include="Admin\Modulo_reservaciones.aspx" />
+    <Content Include="Admin\Modulo_salon.aspx" />
     <Content Include="Admin\Modulo_servicios.aspx" />
+    <Content Include="Admin\Modulo_tarjeta.aspx" />
+    <Content Include="Admin\Modulo_Tipo_habitacion.aspx" />
     <Content Include="Admin\Modulo_usuarios.aspx" />
     <Content Include="Admin\plantilla.aspx" />
     <Content Include="Admin\principal.aspx" />
@@ -302,11 +305,32 @@
       <DependentUpon>Modulo_reservaciones.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Admin\Modulo_salon.aspx.designer.vb">
+      <DependentUpon>Modulo_salon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_salon.aspx.vb">
+      <DependentUpon>Modulo_salon.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Admin\Modulo_servicios.aspx.designer.vb">
       <DependentUpon>Modulo_servicios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Modulo_servicios.aspx.vb">
       <DependentUpon>Modulo_servicios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Modulo_tarjeta.aspx.designer.vb">
+      <DependentUpon>Modulo_tarjeta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_tarjeta.aspx.vb">
+      <DependentUpon>Modulo_tarjeta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Modulo_Tipo_habitacion.aspx.designer.vb">
+      <DependentUpon>Modulo_Tipo_habitacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Modulo_Tipo_habitacion.aspx.vb">
+      <DependentUpon>Modulo_Tipo_habitacion.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Admin\Modulo_usuarios.aspx.designer.vb">

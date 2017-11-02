@@ -107,6 +107,16 @@
           </a>
           <ul class="treeview-menu">
              <li><a href="Modulo_clientes.aspx"><i class="glyphicon glyphicon-eye-open"></i> Gestionar </a></li>
+               <li class="treeview">
+              <a href="#"><i class="glyphicon glyphicon-usd"></i> Tarjeta De Credito
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                 <li><a href="Modulo_tarjeta.aspx"><i class="glyphicon glyphicon-eye-open"></i> Gestionar</a></li>
+                </ul>
+            </li>
           </ul>
         </li>
            <li class="treeview">
@@ -117,6 +127,16 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="Modulo_habitaciones.aspx" class="glyphicon glyphicon-eye-open"> Gestionar </a></li>
+              <li class="treeview">
+              <a href="#"><i class="glyphicon glyphicon-usd"></i> Tipo De Habitacion
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                 <li><a href="Modulo_Tipo_habitacion.aspx"><i class="glyphicon glyphicon-eye-open"></i> Gestionar</a></li>
+                </ul>
+            </li>
           </ul>
         </li>  
             <li class="treeview">
@@ -147,6 +167,16 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="Modulo_evento.aspx" class="glyphicon glyphicon-eye-open"> Gestionar </a></li>
+              <li class="treeview">
+              <a href="#"><i class="glyphicon glyphicon-usd"></i> Salon
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                 <li><a href="Modulo_salon.aspx"><i class="glyphicon glyphicon-eye-open"></i> Gestionar</a></li>
+                </ul>
+            </li>
           </ul>
         </li>
                 <li class="treeview">

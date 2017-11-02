@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin/admin.Master" CodeBehind="Modulo_evento.aspx.vb" Inherits="hotel.Modulo_evento" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin/admin.Master" CodeBehind="Modulo_salon.aspx.vb" Inherits="hotel.Modulo_salon" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -8,7 +8,7 @@
 <div class="panel  panel-primary">
 <%--  <div class="panel-heading">Listado De Proveedores</div>--%>
       <div class="panel-heading">
-    <h3 class="panel-title">Gestionar Eventos</h3>
+    <h3 class="panel-title">plantilla</h3>
   </div>
   <div class="panel-body">
  <asp:Label ID="Label2" runat="server" Text="buscar: "></asp:Label>
@@ -22,38 +22,41 @@
     <li class="list-group-item">
         <!--aca va el gridview-->
 
-     
-
         </li>
         </ul>
     </div>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+            <!--nuevo salon-->
 
-       <asp:Button ID="Button10" runat="server" Text="Button" Style="display:none"/>
-        <ajaxToolkit:ModalPopupExtender ID="Button10_ModalPopupExtender" runat="server" BehaviorID="Button10_ModalPopupExtender" DynamicServicePath="" TargetControlID="Button10"  BackgroundCssClass="modalbakground" PopupControlID="panel1">
-        </ajaxToolkit:ModalPopupExtender>
-<asp:Panel ID="Panel1" runat="server" style="display:none; background: white; Width:50%; height:auto">
+            <asp:Button ID="Button1" runat="server" Text="Button" Style="display:none" />
+            <ajaxToolkit:ModalPopupExtender ID="Button1_ModalPopupExtender" runat="server" BehaviorID="Button1_ModalPopupExtender" DynamicServicePath="" TargetControlID="Button1" BackgroundCssClass="modalbakground" PopupControlID="panel1">
+            </ajaxToolkit:ModalPopupExtender>
+             <asp:Panel ID="Panel1" runat="server" style="display:none; background: white; Width:50%; height:auto">
             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                 <ContentTemplate>
                      <div class="modal-header">
-                          <h3 id="mymodallabel" style="margin-left: 250px;">Nuevo Evento</h3>
+                          <h3 id="mymodallabel" style="margin-left: 250px;">Nuevo Salon</h3>
                        </div>
                        <div class="modal-body">
                          <%--cuerpo del modal--%>
                             <div class="form-horizontal">
-                                 <div class="form-group">
+                                <div class="form-group">
                                     <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
                                    <asp:TextBox ID="codigo" runat="server"></asp:TextBox>
                                     </div>
-                                 </div>
-                                <div class="form-group">
+                                 </div>   
+                                   <div class="form-group">
                                     <label  class="col-sm-4 control-label">Nombre:</label>
                                     <div class="col-sm-8">
-                                   <asp:TextBox ID="nombre" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="nombre" runat="server"></asp:TextBox>
                                     </div>
-                                 </div>   
+                                 </div> 
+                                      <div class="form-group">
+                                    <label  class="col-sm-4 control-label">estado:</label>
+                                    <div class="col-sm-8">
+                                            <asp:TextBox ID="estado" runat="server"></asp:TextBox>
+                                    </div>
+                                 </div> 
                             </div> 
                        </div>     
                        <div class="modal-footer">
@@ -63,11 +66,12 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
         </asp:Panel>
-    
+ 
+
+        </ContentTemplate>
+    </asp:UpdatePanel>
     
 
  
-
-
 
 </asp:Content>

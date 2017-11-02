@@ -113,6 +113,15 @@ Partial Public Class Modulo_evento
     Protected WithEvents UpdatePanel2 As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
+    '''Control codigo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents codigo As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Control nombre.
     '''</summary>
     '''<remarks>
@@ -120,33 +129,6 @@ Partial Public Class Modulo_evento
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents nombre As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control apellido.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents apellido As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control nit.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents nit As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control tipo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents tipo As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Button4.

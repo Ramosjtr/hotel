@@ -113,40 +113,58 @@ Partial Public Class Modulo_habitaciones
     Protected WithEvents UpdatePanel2 As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
-    '''Control nombre.
+    '''Control codigo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents nombre As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents codigo As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control apellido.
+    '''Control metros.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents apellido As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents metros As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control nit.
+    '''Control Cantidad_camas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents nit As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Cantidad_camas As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control tipo.
+    '''Control Costo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents tipo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Costo As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control Estado.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Estado As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control Tipo_habitacion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Tipo_habitacion As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Button4.

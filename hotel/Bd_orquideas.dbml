@@ -6,67 +6,6 @@
       <Column Name="nombre" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tb_habitacion" Member="tb_habitacion">
-    <Type Name="tb_habitacion">
-      <Column Name="codigo_habitacion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="metros" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
-      <Column Name="cantidad_camas" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
-      <Column Name="costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="estado" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
-      <Column Name="tipo_habitacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="tb_habitacion_tb_detalle_factura" Member="tb_detalle_factura" ThisKey="codigo_habitacion" OtherKey="codigo_habitacion" Type="tb_detalle_factura" />
-      <Association Name="tb_tipo_tb_habitacion" Member="tb_tipo" ThisKey="tipo_habitacion" OtherKey="codigo_Tipo" Type="tb_tipo" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_paquete" Member="tb_paquete">
-    <Type Name="tb_paquete">
-      <Column Name="codigo_paquete" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="nombre" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
-      <Column Name="costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="tb_paquete_tb_reservacion" Member="tb_reservacion" ThisKey="codigo_paquete" OtherKey="codigo_paquete" Type="tb_reservacion" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_tipo" Member="tb_tipo">
-    <Type Name="tb_tipo">
-      <Column Name="codigo_Tipo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="nombre" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
-      <Column Name="cantidad_personas" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
-      <Association Name="tb_tipo_tb_habitacion" Member="tb_habitacion" ThisKey="codigo_Tipo" OtherKey="tipo_habitacion" Type="tb_habitacion" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_reservacion" Member="tb_reservacion">
-    <Type Name="tb_reservacion">
-      <Column Name="codigo_reservacion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="cantidad_de_personas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="fecha_inicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="fecha_finalizacion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="codigo_usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="codigo_tarjeta" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
-      <Column Name="codigo_cliente" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
-      <Column Name="codigo_paquete" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="codigo_encabezado" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="tb_reservacion_tb_detalle_factura" Member="tb_detalle_factura" ThisKey="codigo_reservacion" OtherKey="codigo_reservacion" Type="tb_detalle_factura" />
-      <Association Name="tb_paquete_tb_reservacion" Member="tb_paquete" ThisKey="codigo_paquete" OtherKey="codigo_paquete" Type="tb_paquete" IsForeignKey="true" />
-      <Association Name="tb_cliente_tb_reservacion" Member="tb_cliente" ThisKey="codigo_cliente" OtherKey="codigo_cliente" Type="tb_cliente" IsForeignKey="true" />
-      <Association Name="tb_encabezado_tb_reservacion" Member="tb_encabezado" ThisKey="codigo_encabezado" OtherKey="codigo_encabezado" Type="tb_encabezado" IsForeignKey="true" />
-      <Association Name="tb_tarjeta_tb_reservacion" Member="tb_tarjeta" ThisKey="codigo_tarjeta" OtherKey="codigo_tarjeta" Type="tb_tarjeta" IsForeignKey="true" />
-      <Association Name="tb_usuarios_tb_reservacion" Member="tb_usuarios" ThisKey="codigo_usuario" OtherKey="codigo_usuario" Type="tb_usuarios" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_reservacion_evento" Member="tb_reservacion_evento">
-    <Type Name="tb_reservacion_evento">
-      <Column Name="codigo_reservacion_eve" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="cantidad_de_personas" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="fecha_inicio" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="fecha_finalizacion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="codigo_evento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="codigo_salon" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="tb_reservacion_evento_tb_detalle_evento" Member="tb_detalle_evento" ThisKey="codigo_reservacion_eve" OtherKey="codigo_reservacion" Type="tb_detalle_evento" />
-      <Association Name="tb_evento_tb_reservacion_evento" Member="tb_evento" ThisKey="codigo_evento" OtherKey="codigo_evento" Type="tb_evento" IsForeignKey="true" />
-      <Association Name="tb_salon_tb_reservacion_evento" Member="tb_salon" ThisKey="codigo_salon" OtherKey="codigo_salon" Type="tb_salon" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.tb_cliente" Member="tb_cliente">
     <Type Name="tb_cliente">
       <Column Name="codigo_cliente" Type="System.String" DbType="NChar(75) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -83,17 +22,8 @@
       <Column Name="codigo_registro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="codigo_reservacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="codigo_encabezado" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="tb_reservacion_evento_tb_detalle_evento" Member="tb_reservacion_evento" ThisKey="codigo_reservacion" OtherKey="codigo_reservacion_eve" Type="tb_reservacion_evento" IsForeignKey="true" />
       <Association Name="tb_encabezado_tb_detalle_evento" Member="tb_encabezado" ThisKey="codigo_encabezado" OtherKey="codigo_encabezado" Type="tb_encabezado" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_detalle_factura" Member="tb_detalle_factura">
-    <Type Name="tb_detalle_factura">
-      <Column Name="codigo_detalle" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="codigo_reservacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="codigo_habitacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="tb_habitacion_tb_detalle_factura" Member="tb_habitacion" ThisKey="codigo_habitacion" OtherKey="codigo_habitacion" Type="tb_habitacion" IsForeignKey="true" />
-      <Association Name="tb_reservacion_tb_detalle_factura" Member="tb_reservacion" ThisKey="codigo_reservacion" OtherKey="codigo_reservacion" Type="tb_reservacion" IsForeignKey="true" />
+      <Association Name="tb_reservacion_evento_tb_detalle_evento" Member="tb_reservacion_evento" ThisKey="codigo_reservacion" OtherKey="codigo_reservacion_eve" Type="tb_reservacion_evento" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.tb_encabezado" Member="tb_encabezado">
@@ -102,8 +32,8 @@
       <Column Name="numero_documento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="total" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="tb_encabezado_tb_reservacion" Member="tb_reservacion" ThisKey="codigo_encabezado" OtherKey="codigo_encabezado" Type="tb_reservacion" />
       <Association Name="tb_encabezado_tb_detalle_evento" Member="tb_detalle_evento" ThisKey="codigo_encabezado" OtherKey="codigo_encabezado" Type="tb_detalle_evento" />
+      <Association Name="tb_encabezado_tb_reservacion" Member="tb_reservacion" ThisKey="codigo_encabezado" OtherKey="codigo_encabezado" Type="tb_reservacion" />
     </Type>
   </Table>
   <Table Name="dbo.tb_evento" Member="tb_evento">
@@ -113,28 +43,98 @@
       <Association Name="tb_evento_tb_reservacion_evento" Member="tb_reservacion_evento" ThisKey="codigo_evento" OtherKey="codigo_evento" Type="tb_reservacion_evento" />
     </Type>
   </Table>
-  <Table Name="dbo.tb_salon" Member="tb_salon">
-    <Type Name="tb_salon">
-      <Column Name="codigo_salon" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="nombre" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
-      <Column Name="estado" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
-      <Association Name="tb_salon_tb_reservacion_evento" Member="tb_reservacion_evento" ThisKey="codigo_salon" OtherKey="codigo_salon" Type="tb_reservacion_evento" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_tarjeta" Member="tb_tarjeta">
-    <Type Name="tb_tarjeta">
-      <Column Name="codigo_tarjeta" Type="System.String" DbType="VarChar(75) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="titular" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
-      <Column Name="numero_tarjeta" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
-      <Association Name="tb_tarjeta_tb_reservacion" Member="tb_reservacion" ThisKey="codigo_tarjeta" OtherKey="codigo_tarjeta" Type="tb_reservacion" />
-    </Type>
-  </Table>
   <Table Name="dbo.tb_usuarios" Member="tb_usuarios">
     <Type Name="tb_usuarios">
       <Column Name="codigo_usuario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="nombre" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
       <Column Name="contraseña" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
       <Association Name="tb_usuarios_tb_reservacion" Member="tb_reservacion" ThisKey="codigo_usuario" OtherKey="codigo_usuario" Type="tb_reservacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_tipo" Member="tb_tipo">
+    <Type Name="tb_tipo">
+      <Column Name="codigo_Tipo" Type="System.String" DbType="NChar(75) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Column Name="cantidad_personas" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Association Name="tb_tipo_tb_habitacion" Member="tb_habitacion" ThisKey="codigo_Tipo" OtherKey="tipo_habitacion" Type="tb_habitacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_detalle_factura" Member="tb_detalle_factura">
+    <Type Name="tb_detalle_factura">
+      <Column Name="codigo_detalle" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codigo_reservacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="codigo_habitacion" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Association Name="tb_habitacion_tb_detalle_factura" Member="tb_habitacion" ThisKey="codigo_habitacion" OtherKey="codigo_habitacion" Type="tb_habitacion" IsForeignKey="true" />
+      <Association Name="tb_reservacion_tb_detalle_factura" Member="tb_reservacion" ThisKey="codigo_reservacion" OtherKey="codigo_reservacion" Type="tb_reservacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_habitacion" Member="tb_habitacion">
+    <Type Name="tb_habitacion">
+      <Column Name="codigo_habitacion" Type="System.String" DbType="NChar(75) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="metros" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Column Name="cantidad_camas" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="estado" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Column Name="tipo_habitacion" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Association Name="tb_habitacion_tb_detalle_factura" Member="tb_detalle_factura" ThisKey="codigo_habitacion" OtherKey="codigo_habitacion" Type="tb_detalle_factura" />
+      <Association Name="tb_tipo_tb_habitacion" Member="tb_tipo" ThisKey="tipo_habitacion" OtherKey="codigo_Tipo" Type="tb_tipo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_paquete" Member="tb_paquete">
+    <Type Name="tb_paquete">
+      <Column Name="codigo_paquete" Type="System.String" DbType="NChar(75) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Column Name="costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tb_paquete_tb_reservacion" Member="tb_reservacion" ThisKey="codigo_paquete" OtherKey="codigo_paquete" Type="tb_reservacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_reservacion_evento" Member="tb_reservacion_evento">
+    <Type Name="tb_reservacion_evento">
+      <Column Name="codigo_reservacion_eve" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cantidad_de_personas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fecha_finalizacion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="codigo_evento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="codigo_salon" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Association Name="tb_reservacion_evento_tb_detalle_evento" Member="tb_detalle_evento" ThisKey="codigo_reservacion_eve" OtherKey="codigo_reservacion" Type="tb_detalle_evento" />
+      <Association Name="tb_evento_tb_reservacion_evento" Member="tb_evento" ThisKey="codigo_evento" OtherKey="codigo_evento" Type="tb_evento" IsForeignKey="true" />
+      <Association Name="tb_salon_tb_reservacion_evento" Member="tb_salon" ThisKey="codigo_salon" OtherKey="codigo_salon" Type="tb_salon" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_salon" Member="tb_salon">
+    <Type Name="tb_salon">
+      <Column Name="codigo_salon" Type="System.String" DbType="NChar(75) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Column Name="estado" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Association Name="tb_salon_tb_reservacion_evento" Member="tb_reservacion_evento" ThisKey="codigo_salon" OtherKey="codigo_salon" Type="tb_reservacion_evento" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_reservacion" Member="tb_reservacion">
+    <Type Name="tb_reservacion">
+      <Column Name="codigo_reservacion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cantidad_de_personas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_finalizacion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="codigo_usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="codigo_tarjeta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="codigo_cliente" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Column Name="codigo_paquete" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Column Name="codigo_encabezado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tb_reservacion_tb_detalle_factura" Member="tb_detalle_factura" ThisKey="codigo_reservacion" OtherKey="codigo_reservacion" Type="tb_detalle_factura" />
+      <Association Name="tb_cliente_tb_reservacion" Member="tb_cliente" ThisKey="codigo_cliente" OtherKey="codigo_cliente" Type="tb_cliente" IsForeignKey="true" />
+      <Association Name="tb_encabezado_tb_reservacion" Member="tb_encabezado" ThisKey="codigo_encabezado" OtherKey="codigo_encabezado" Type="tb_encabezado" IsForeignKey="true" />
+      <Association Name="tb_paquete_tb_reservacion" Member="tb_paquete" ThisKey="codigo_paquete" OtherKey="codigo_paquete" Type="tb_paquete" IsForeignKey="true" />
+      <Association Name="tb_usuarios_tb_reservacion" Member="tb_usuarios" ThisKey="codigo_usuario" OtherKey="codigo_usuario" Type="tb_usuarios" IsForeignKey="true" />
+      <Association Name="tb_tarjeta_tb_reservacion" Member="tb_tarjeta" ThisKey="codigo_tarjeta" OtherKey="codigo_tarjeta" Type="tb_tarjeta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_tarjeta" Member="tb_tarjeta">
+    <Type Name="tb_tarjeta">
+      <Column Name="codigo_tarjeta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="titular" Type="System.String" DbType="NChar(75)" CanBeNull="true" />
+      <Column Name="numero_tarjeta" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Association Name="tb_tarjeta_tb_reservacion" Member="tb_reservacion" ThisKey="codigo_tarjeta" OtherKey="codigo_tarjeta" Type="tb_reservacion" />
     </Type>
   </Table>
 </Database>
