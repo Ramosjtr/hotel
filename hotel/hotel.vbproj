@@ -190,16 +190,16 @@
     <Content Include="Admin\Modulo_paquetes.aspx" />
     <Content Include="Admin\Modulo_reservaciones.aspx" />
     <Content Include="Admin\Modulo_salon.aspx" />
-    <Content Include="Admin\Modulo_servicios.aspx" />
-    <Content Include="Admin\Modulo_tarjeta.aspx" />
     <Content Include="Admin\Modulo_Tipo_habitacion.aspx" />
     <Content Include="Admin\Modulo_usuarios.aspx" />
     <Content Include="Admin\plantilla.aspx" />
+    <Content Include="Admin\plantilla2.aspx" />
     <Content Include="Admin\principal.aspx" />
     <Content Include="Content\AdminLTE.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\footable.bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\skin-blue.min.css" />
     <Content Include="Content\style_login.css" />
@@ -220,6 +220,7 @@
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\footable.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -250,11 +251,15 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Vista\habitaciones.aspx" />
+    <Content Include="Vista\incio.aspx" />
+    <Content Include="Vista\rasturante.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Vista\Maestro.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -275,7 +280,7 @@
     </Compile>
     <Compile Include="Admin\Modulo_clientes.aspx.vb">
       <DependentUpon>Modulo_clientes.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Modulo_evento.aspx.designer.vb">
       <DependentUpon>Modulo_evento.aspx</DependentUpon>
@@ -312,20 +317,6 @@
       <DependentUpon>Modulo_salon.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Admin\Modulo_servicios.aspx.designer.vb">
-      <DependentUpon>Modulo_servicios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Modulo_servicios.aspx.vb">
-      <DependentUpon>Modulo_servicios.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Modulo_tarjeta.aspx.designer.vb">
-      <DependentUpon>Modulo_tarjeta.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Modulo_tarjeta.aspx.vb">
-      <DependentUpon>Modulo_tarjeta.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Admin\Modulo_Tipo_habitacion.aspx.designer.vb">
       <DependentUpon>Modulo_Tipo_habitacion.aspx</DependentUpon>
     </Compile>
@@ -345,6 +336,13 @@
     </Compile>
     <Compile Include="Admin\plantilla.aspx.vb">
       <DependentUpon>plantilla.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\plantilla2.aspx.designer.vb">
+      <DependentUpon>plantilla2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\plantilla2.aspx.vb">
+      <DependentUpon>plantilla2.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Admin\principal.aspx.designer.vb">
@@ -418,6 +416,34 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.vb">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\habitaciones.aspx.designer.vb">
+      <DependentUpon>habitaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\habitaciones.aspx.vb">
+      <DependentUpon>habitaciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Vista\incio.aspx.designer.vb">
+      <DependentUpon>incio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\incio.aspx.vb">
+      <DependentUpon>incio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Vista\Maestro.Master.designer.vb">
+      <DependentUpon>Maestro.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Maestro.Master.vb">
+      <DependentUpon>Maestro.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\rasturante.aspx.designer.vb">
+      <DependentUpon>rasturante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\rasturante.aspx.vb">
+      <DependentUpon>rasturante.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

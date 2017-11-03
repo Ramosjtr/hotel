@@ -17,13 +17,13 @@
         With tipo
             .codigo_Tipo = codigo.Text
             .nombre = nombre.Text
-            .cantidad_personas = cantidad_personas.Text
+            .descripcion = descripcion.Text
         End With
         nuevo_tipo.tb_tipo.InsertOnSubmit(tipo)
         nuevo_tipo.SubmitChanges()
         codigo.Text = ""
         nombre.Text = ""
-        cantidad_personas.Text = ""
+        descripcion.Text = ""
         Button1_ModalPopupExtender.Hide()
         MsgBox("Guardado Correctamente")
 

@@ -1,0 +1,19 @@
+insercion de datos
+cliente
+evento
+habitacion
+paquete
+tb_salon
+tb_tipo
+tb_usuarios
+no_________
+detalle_evento
+detalle _factura
+detalle_encabezado
+tb_reservacion
+tb_reservacion_evento
+*tb_servicio
+*tb_tarjeta
+
+
+gridview para mostrar los datos

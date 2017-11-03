@@ -1,12 +1,12 @@
 ﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="admin.master.vb" Inherits="hotel.admin" %>
-
 <!DOCTYPE html>
 <html>
     <head runat="server">
         <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
         <link href="../../Content/AdminLTE.min.css" rel="stylesheet" />
         <link href="../../Content/skin-blue.min.css" rel="stylesheet" />
-          <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../Content/footable.bootstrap.min.css" rel="stylesheet" />
+          <meta name="viewport" content="width=device-width, initial-scale=1"><!--que verifique el tamaño de la pantalla-->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> MODULO| ADMINISTRACION</title>
@@ -17,11 +17,13 @@
          <style type="text/css">   
             .modalbakground
             {
+                position:fixed;
                 background-color:black;
                 filter: alpha(opacity=90);
                 opacity: 0.8;
                 z-index:10000;
             }
+           
           </style>
 </head>
 <!--INICIO DEL BODY-->
@@ -107,16 +109,7 @@
           </a>
           <ul class="treeview-menu">
              <li><a href="Modulo_clientes.aspx"><i class="glyphicon glyphicon-eye-open"></i> Gestionar </a></li>
-               <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-usd"></i> Tarjeta De Credito
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                 <li><a href="Modulo_tarjeta.aspx"><i class="glyphicon glyphicon-eye-open"></i> Gestionar</a></li>
-                </ul>
-            </li>
+        
           </ul>
         </li>
            <li class="treeview">
@@ -149,16 +142,7 @@
             <li><a href="Modulo_reservaciones.aspx" class="glyphicon glyphicon-eye-open"> Gestionar </a></li>
           </ul>
         </li> 
-             <li class="treeview">
-          <a href="#"><i class="glyphicon glyphicon-user"></i> <span>Servicios</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="Modulo_servicios.aspx" class="glyphicon glyphicon-eye-open"> Gestionar </a></li>
-          </ul>
-        </li>
+             
            <li class="treeview">
           <a href="#"><i class="glyphicon glyphicon-user"></i> <span>evento</span>
             <span class="pull-right-container">
@@ -244,7 +228,12 @@
 <!-- AdminLTE App -->
          <script src="../Scripts/adminlte.min.js"></script>
          <script src="../Scripts/bootstrap.min.js"></script>
-
+         <script src="../Scripts/footable.min.js"></script>
+          <script type="text/javascript">
+             $(function () {
+                 $('[id*=GridView1]').footable();
+             });
+        </script>
          </form>
 </body>
 </html>

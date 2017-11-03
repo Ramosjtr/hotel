@@ -15,7 +15,7 @@
                     <asp:Button ID="Button3" runat="server" Text="B" CssClass="btn btn-info btn-sm" />
                     <asp:Button ID="Button8" runat="server" Text="Todos" CssClass="btn btn-info" Height="36px" Width="82px"/>
 
-      <asp:Button ID="Button9" runat="server" Text="Nuevo"  style="margin-left: 600px;" CssClass="btn btn-success" />
+      <asp:Button ID="Button9" runat="server" Text="Nuevo"   CssClass="btn btn-success" />
   </div>
     <ul class="list-group height:1px">
     <li class="list-group-item">

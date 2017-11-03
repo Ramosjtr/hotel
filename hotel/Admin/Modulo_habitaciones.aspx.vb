@@ -3,9 +3,7 @@
     Inherits System.Web.UI.Page
     Dim nueva_habitacion As New Bd_orquideasDataContext
     Dim habitacion As New tb_habitacion
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
     End Sub
     'abrir modal nueva habitacion
     Protected Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click

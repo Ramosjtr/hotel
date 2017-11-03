@@ -16,13 +16,32 @@
                     <asp:Button ID="Button3" runat="server" Text="B" CssClass="btn btn-info btn-sm" />
                     <asp:Button ID="Button8" runat="server" Text="Todos" CssClass="btn btn-info" Height="36px" Width="82px"/>
 
-      <asp:Button ID="Button9" runat="server" Text="Nuevo"  style="margin-left: 600px;" CssClass="btn btn-success" />
+      <asp:Button ID="Button9" runat="server" Text="Nuevo"   CssClass="btn btn-success" />
   </div>
     <ul class="list-group height:1px">
     <li class="list-group-item">
         <!--aca va el gridview-->
-
+           <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="codigo_Tipo" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+               <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+               <Columns>
+                   <asp:BoundField DataField="codigo_Tipo" HeaderText="codigo_Tipo" ReadOnly="True" SortExpression="codigo_Tipo" />
+                   <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
+                   <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+               </Columns>
+               <EditRowStyle BackColor="#999999" />
+               <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+               <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+               <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+               <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+               <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+               <SortedAscendingCellStyle BackColor="#E9E7E2" />
+               <SortedAscendingHeaderStyle BackColor="#506C8C" />
+               <SortedDescendingCellStyle BackColor="#FFFDF8" />
+               <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BD_orquideasConnectionString %>" SelectCommand="SELECT DISTINCT * FROM [tb_tipo]"></asp:SqlDataSource>
         </li>
+     
         </ul>
     </div>
         </ContentTemplate>
@@ -35,7 +54,7 @@
             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                 <ContentTemplate>
                      <div class="modal-header">
-                          <h3 id="mymodallabel" style="margin-left: 250px;">Nuevo Tipo De Habitacion</h3>
+                          <h3 id="mymodallabel" >Nuevo Tipo De Habitacion</h3>
                        </div>
                        <div class="modal-body">
                          <%--cuerpo del modal--%>
@@ -53,9 +72,9 @@
                                     </div>
                                  </div> 
                                       <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Cantidad De Personas:</label>
+                                    <label  class="col-sm-4 control-label">Descripcion:</label>
                                     <div class="col-sm-8">
-                                           <asp:TextBox ID="cantidad_personas" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="descripcion" runat="server"></asp:TextBox>
                                     </div>
                                  </div> 
                             </div> 

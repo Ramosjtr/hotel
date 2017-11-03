@@ -31,41 +31,11 @@ Partial Public Class Bd_orquideasDataContext
   #Region "Definiciones de métodos de extensibilidad"
   Partial Private Sub OnCreated()
   End Sub
-  Partial Private Sub Inserttb_servicio(instance As tb_servicio)
+  Partial Private Sub Inserttb_habitacion(instance As tb_habitacion)
     End Sub
-  Partial Private Sub Updatetb_servicio(instance As tb_servicio)
+  Partial Private Sub Updatetb_habitacion(instance As tb_habitacion)
     End Sub
-  Partial Private Sub Deletetb_servicio(instance As tb_servicio)
-    End Sub
-  Partial Private Sub Inserttb_cliente(instance As tb_cliente)
-    End Sub
-  Partial Private Sub Updatetb_cliente(instance As tb_cliente)
-    End Sub
-  Partial Private Sub Deletetb_cliente(instance As tb_cliente)
-    End Sub
-  Partial Private Sub Inserttb_detalle_evento(instance As tb_detalle_evento)
-    End Sub
-  Partial Private Sub Updatetb_detalle_evento(instance As tb_detalle_evento)
-    End Sub
-  Partial Private Sub Deletetb_detalle_evento(instance As tb_detalle_evento)
-    End Sub
-  Partial Private Sub Inserttb_encabezado(instance As tb_encabezado)
-    End Sub
-  Partial Private Sub Updatetb_encabezado(instance As tb_encabezado)
-    End Sub
-  Partial Private Sub Deletetb_encabezado(instance As tb_encabezado)
-    End Sub
-  Partial Private Sub Inserttb_evento(instance As tb_evento)
-    End Sub
-  Partial Private Sub Updatetb_evento(instance As tb_evento)
-    End Sub
-  Partial Private Sub Deletetb_evento(instance As tb_evento)
-    End Sub
-  Partial Private Sub Inserttb_usuarios(instance As tb_usuarios)
-    End Sub
-  Partial Private Sub Updatetb_usuarios(instance As tb_usuarios)
-    End Sub
-  Partial Private Sub Deletetb_usuarios(instance As tb_usuarios)
+  Partial Private Sub Deletetb_habitacion(instance As tb_habitacion)
     End Sub
   Partial Private Sub Inserttb_tipo(instance As tb_tipo)
     End Sub
@@ -79,17 +49,29 @@ Partial Public Class Bd_orquideasDataContext
     End Sub
   Partial Private Sub Deletetb_detalle_factura(instance As tb_detalle_factura)
     End Sub
-  Partial Private Sub Inserttb_habitacion(instance As tb_habitacion)
+  Partial Private Sub Inserttb_reservacion(instance As tb_reservacion)
     End Sub
-  Partial Private Sub Updatetb_habitacion(instance As tb_habitacion)
+  Partial Private Sub Updatetb_reservacion(instance As tb_reservacion)
     End Sub
-  Partial Private Sub Deletetb_habitacion(instance As tb_habitacion)
+  Partial Private Sub Deletetb_reservacion(instance As tb_reservacion)
     End Sub
   Partial Private Sub Inserttb_paquete(instance As tb_paquete)
     End Sub
   Partial Private Sub Updatetb_paquete(instance As tb_paquete)
     End Sub
   Partial Private Sub Deletetb_paquete(instance As tb_paquete)
+    End Sub
+  Partial Private Sub Inserttb_encabezado(instance As tb_encabezado)
+    End Sub
+  Partial Private Sub Updatetb_encabezado(instance As tb_encabezado)
+    End Sub
+  Partial Private Sub Deletetb_encabezado(instance As tb_encabezado)
+    End Sub
+  Partial Private Sub Inserttb_cliente(instance As tb_cliente)
+    End Sub
+  Partial Private Sub Updatetb_cliente(instance As tb_cliente)
+    End Sub
+  Partial Private Sub Deletetb_cliente(instance As tb_cliente)
     End Sub
   Partial Private Sub Inserttb_reservacion_evento(instance As tb_reservacion_evento)
     End Sub
@@ -103,17 +85,17 @@ Partial Public Class Bd_orquideasDataContext
     End Sub
   Partial Private Sub Deletetb_salon(instance As tb_salon)
     End Sub
-  Partial Private Sub Inserttb_reservacion(instance As tb_reservacion)
+  Partial Private Sub Inserttb_evento(instance As tb_evento)
     End Sub
-  Partial Private Sub Updatetb_reservacion(instance As tb_reservacion)
+  Partial Private Sub Updatetb_evento(instance As tb_evento)
     End Sub
-  Partial Private Sub Deletetb_reservacion(instance As tb_reservacion)
+  Partial Private Sub Deletetb_evento(instance As tb_evento)
     End Sub
-  Partial Private Sub Inserttb_tarjeta(instance As tb_tarjeta)
+  Partial Private Sub Inserttb_usuarios(instance As tb_usuarios)
     End Sub
-  Partial Private Sub Updatetb_tarjeta(instance As tb_tarjeta)
+  Partial Private Sub Updatetb_usuarios(instance As tb_usuarios)
     End Sub
-  Partial Private Sub Deletetb_tarjeta(instance As tb_tarjeta)
+  Partial Private Sub Deletetb_usuarios(instance As tb_usuarios)
     End Sub
   #End Region
 	
@@ -142,39 +124,9 @@ Partial Public Class Bd_orquideasDataContext
 		OnCreated
 	End Sub
 	
-	Public ReadOnly Property tb_servicio() As System.Data.Linq.Table(Of tb_servicio)
+	Public ReadOnly Property tb_habitacion() As System.Data.Linq.Table(Of tb_habitacion)
 		Get
-			Return Me.GetTable(Of tb_servicio)
-		End Get
-	End Property
-	
-	Public ReadOnly Property tb_cliente() As System.Data.Linq.Table(Of tb_cliente)
-		Get
-			Return Me.GetTable(Of tb_cliente)
-		End Get
-	End Property
-	
-	Public ReadOnly Property tb_detalle_evento() As System.Data.Linq.Table(Of tb_detalle_evento)
-		Get
-			Return Me.GetTable(Of tb_detalle_evento)
-		End Get
-	End Property
-	
-	Public ReadOnly Property tb_encabezado() As System.Data.Linq.Table(Of tb_encabezado)
-		Get
-			Return Me.GetTable(Of tb_encabezado)
-		End Get
-	End Property
-	
-	Public ReadOnly Property tb_evento() As System.Data.Linq.Table(Of tb_evento)
-		Get
-			Return Me.GetTable(Of tb_evento)
-		End Get
-	End Property
-	
-	Public ReadOnly Property tb_usuarios() As System.Data.Linq.Table(Of tb_usuarios)
-		Get
-			Return Me.GetTable(Of tb_usuarios)
+			Return Me.GetTable(Of tb_habitacion)
 		End Get
 	End Property
 	
@@ -190,15 +142,27 @@ Partial Public Class Bd_orquideasDataContext
 		End Get
 	End Property
 	
-	Public ReadOnly Property tb_habitacion() As System.Data.Linq.Table(Of tb_habitacion)
+	Public ReadOnly Property tb_reservacion() As System.Data.Linq.Table(Of tb_reservacion)
 		Get
-			Return Me.GetTable(Of tb_habitacion)
+			Return Me.GetTable(Of tb_reservacion)
 		End Get
 	End Property
 	
 	Public ReadOnly Property tb_paquete() As System.Data.Linq.Table(Of tb_paquete)
 		Get
 			Return Me.GetTable(Of tb_paquete)
+		End Get
+	End Property
+	
+	Public ReadOnly Property tb_encabezado() As System.Data.Linq.Table(Of tb_encabezado)
+		Get
+			Return Me.GetTable(Of tb_encabezado)
+		End Get
+	End Property
+	
+	Public ReadOnly Property tb_cliente() As System.Data.Linq.Table(Of tb_cliente)
+		Get
+			Return Me.GetTable(Of tb_cliente)
 		End Get
 	End Property
 	
@@ -214,1179 +178,17 @@ Partial Public Class Bd_orquideasDataContext
 		End Get
 	End Property
 	
-	Public ReadOnly Property tb_reservacion() As System.Data.Linq.Table(Of tb_reservacion)
+	Public ReadOnly Property tb_evento() As System.Data.Linq.Table(Of tb_evento)
 		Get
-			Return Me.GetTable(Of tb_reservacion)
+			Return Me.GetTable(Of tb_evento)
 		End Get
 	End Property
 	
-	Public ReadOnly Property tb_tarjeta() As System.Data.Linq.Table(Of tb_tarjeta)
+	Public ReadOnly Property tb_usuarios() As System.Data.Linq.Table(Of tb_usuarios)
 		Get
-			Return Me.GetTable(Of tb_tarjeta)
+			Return Me.GetTable(Of tb_usuarios)
 		End Get
 	End Property
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_servicio")>  _
-Partial Public Class tb_servicio
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _codigo_servicio As Integer
-	
-	Private _nombre As String
-	
-    #Region "Definiciones de métodos de extensibilidad"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Oncodigo_servicioChanging(value As Integer)
-    End Sub
-    Partial Private Sub Oncodigo_servicioChanged()
-    End Sub
-    Partial Private Sub OnnombreChanging(value As String)
-    End Sub
-    Partial Private Sub OnnombreChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_servicio", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property codigo_servicio() As Integer
-		Get
-			Return Me._codigo_servicio
-		End Get
-		Set
-			If ((Me._codigo_servicio = value)  _
-						= false) Then
-				Me.Oncodigo_servicioChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_servicio = value
-				Me.SendPropertyChanged("codigo_servicio")
-				Me.Oncodigo_servicioChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_nombre", DbType:="NChar(75)")>  _
-	Public Property nombre() As String
-		Get
-			Return Me._nombre
-		End Get
-		Set
-			If (String.Equals(Me._nombre, value) = false) Then
-				Me.OnnombreChanging(value)
-				Me.SendPropertyChanging
-				Me._nombre = value
-				Me.SendPropertyChanged("nombre")
-				Me.OnnombreChanged
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_cliente")>  _
-Partial Public Class tb_cliente
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _codigo_cliente As String
-	
-	Private _nombre As String
-	
-	Private _apellido As String
-	
-	Private _direccion As String
-	
-	Private _telefono As String
-	
-	Private _correo As String
-	
-	Private _tb_reservacion As EntitySet(Of tb_reservacion)
-	
-    #Region "Definiciones de métodos de extensibilidad"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Oncodigo_clienteChanging(value As String)
-    End Sub
-    Partial Private Sub Oncodigo_clienteChanged()
-    End Sub
-    Partial Private Sub OnnombreChanging(value As String)
-    End Sub
-    Partial Private Sub OnnombreChanged()
-    End Sub
-    Partial Private Sub OnapellidoChanging(value As String)
-    End Sub
-    Partial Private Sub OnapellidoChanged()
-    End Sub
-    Partial Private Sub OndireccionChanging(value As String)
-    End Sub
-    Partial Private Sub OndireccionChanged()
-    End Sub
-    Partial Private Sub OntelefonoChanging(value As String)
-    End Sub
-    Partial Private Sub OntelefonoChanged()
-    End Sub
-    Partial Private Sub OncorreoChanging(value As String)
-    End Sub
-    Partial Private Sub OncorreoChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._tb_reservacion = New EntitySet(Of tb_reservacion)(AddressOf Me.attach_tb_reservacion, AddressOf Me.detach_tb_reservacion)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_cliente", DbType:="NChar(75) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property codigo_cliente() As String
-		Get
-			Return Me._codigo_cliente
-		End Get
-		Set
-			If (String.Equals(Me._codigo_cliente, value) = false) Then
-				Me.Oncodigo_clienteChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_cliente = value
-				Me.SendPropertyChanged("codigo_cliente")
-				Me.Oncodigo_clienteChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_nombre", DbType:="NChar(75)")>  _
-	Public Property nombre() As String
-		Get
-			Return Me._nombre
-		End Get
-		Set
-			If (String.Equals(Me._nombre, value) = false) Then
-				Me.OnnombreChanging(value)
-				Me.SendPropertyChanging
-				Me._nombre = value
-				Me.SendPropertyChanged("nombre")
-				Me.OnnombreChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_apellido", DbType:="NChar(75)")>  _
-	Public Property apellido() As String
-		Get
-			Return Me._apellido
-		End Get
-		Set
-			If (String.Equals(Me._apellido, value) = false) Then
-				Me.OnapellidoChanging(value)
-				Me.SendPropertyChanging
-				Me._apellido = value
-				Me.SendPropertyChanged("apellido")
-				Me.OnapellidoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_direccion", DbType:="NChar(75)")>  _
-	Public Property direccion() As String
-		Get
-			Return Me._direccion
-		End Get
-		Set
-			If (String.Equals(Me._direccion, value) = false) Then
-				Me.OndireccionChanging(value)
-				Me.SendPropertyChanging
-				Me._direccion = value
-				Me.SendPropertyChanged("direccion")
-				Me.OndireccionChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_telefono", DbType:="NChar(20)")>  _
-	Public Property telefono() As String
-		Get
-			Return Me._telefono
-		End Get
-		Set
-			If (String.Equals(Me._telefono, value) = false) Then
-				Me.OntelefonoChanging(value)
-				Me.SendPropertyChanging
-				Me._telefono = value
-				Me.SendPropertyChanged("telefono")
-				Me.OntelefonoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_correo", DbType:="NChar(20)")>  _
-	Public Property correo() As String
-		Get
-			Return Me._correo
-		End Get
-		Set
-			If (String.Equals(Me._correo, value) = false) Then
-				Me.OncorreoChanging(value)
-				Me.SendPropertyChanging
-				Me._correo = value
-				Me.SendPropertyChanged("correo")
-				Me.OncorreoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_cliente_tb_reservacion", Storage:="_tb_reservacion", ThisKey:="codigo_cliente", OtherKey:="codigo_cliente")>  _
-	Public Property tb_reservacion() As EntitySet(Of tb_reservacion)
-		Get
-			Return Me._tb_reservacion
-		End Get
-		Set
-			Me._tb_reservacion.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_tb_reservacion(ByVal entity As tb_reservacion)
-		Me.SendPropertyChanging
-		entity.tb_cliente = Me
-	End Sub
-	
-	Private Sub detach_tb_reservacion(ByVal entity As tb_reservacion)
-		Me.SendPropertyChanging
-		entity.tb_cliente = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_detalle_evento")>  _
-Partial Public Class tb_detalle_evento
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _codigo_registro As Integer
-	
-	Private _codigo_reservacion As System.Nullable(Of Integer)
-	
-	Private _codigo_encabezado As System.Nullable(Of Integer)
-	
-	Private _tb_encabezado As EntityRef(Of tb_encabezado)
-	
-	Private _tb_reservacion_evento As EntityRef(Of tb_reservacion_evento)
-	
-    #Region "Definiciones de métodos de extensibilidad"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Oncodigo_registroChanging(value As Integer)
-    End Sub
-    Partial Private Sub Oncodigo_registroChanged()
-    End Sub
-    Partial Private Sub Oncodigo_reservacionChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub Oncodigo_reservacionChanged()
-    End Sub
-    Partial Private Sub Oncodigo_encabezadoChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub Oncodigo_encabezadoChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._tb_encabezado = CType(Nothing, EntityRef(Of tb_encabezado))
-		Me._tb_reservacion_evento = CType(Nothing, EntityRef(Of tb_reservacion_evento))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_registro", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property codigo_registro() As Integer
-		Get
-			Return Me._codigo_registro
-		End Get
-		Set
-			If ((Me._codigo_registro = value)  _
-						= false) Then
-				Me.Oncodigo_registroChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_registro = value
-				Me.SendPropertyChanged("codigo_registro")
-				Me.Oncodigo_registroChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_reservacion", DbType:="Int")>  _
-	Public Property codigo_reservacion() As System.Nullable(Of Integer)
-		Get
-			Return Me._codigo_reservacion
-		End Get
-		Set
-			If (Me._codigo_reservacion.Equals(value) = false) Then
-				If Me._tb_reservacion_evento.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.Oncodigo_reservacionChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_reservacion = value
-				Me.SendPropertyChanged("codigo_reservacion")
-				Me.Oncodigo_reservacionChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_encabezado", DbType:="Int")>  _
-	Public Property codigo_encabezado() As System.Nullable(Of Integer)
-		Get
-			Return Me._codigo_encabezado
-		End Get
-		Set
-			If (Me._codigo_encabezado.Equals(value) = false) Then
-				If Me._tb_encabezado.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.Oncodigo_encabezadoChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_encabezado = value
-				Me.SendPropertyChanged("codigo_encabezado")
-				Me.Oncodigo_encabezadoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_encabezado_tb_detalle_evento", Storage:="_tb_encabezado", ThisKey:="codigo_encabezado", OtherKey:="codigo_encabezado", IsForeignKey:=true)>  _
-	Public Property tb_encabezado() As tb_encabezado
-		Get
-			Return Me._tb_encabezado.Entity
-		End Get
-		Set
-			Dim previousValue As tb_encabezado = Me._tb_encabezado.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_encabezado.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._tb_encabezado.Entity = Nothing
-					previousValue.tb_detalle_evento.Remove(Me)
-				End If
-				Me._tb_encabezado.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.tb_detalle_evento.Add(Me)
-					Me._codigo_encabezado = value.codigo_encabezado
-				Else
-					Me._codigo_encabezado = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("tb_encabezado")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_reservacion_evento_tb_detalle_evento", Storage:="_tb_reservacion_evento", ThisKey:="codigo_reservacion", OtherKey:="codigo_reservacion_eve", IsForeignKey:=true)>  _
-	Public Property tb_reservacion_evento() As tb_reservacion_evento
-		Get
-			Return Me._tb_reservacion_evento.Entity
-		End Get
-		Set
-			Dim previousValue As tb_reservacion_evento = Me._tb_reservacion_evento.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_reservacion_evento.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._tb_reservacion_evento.Entity = Nothing
-					previousValue.tb_detalle_evento.Remove(Me)
-				End If
-				Me._tb_reservacion_evento.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.tb_detalle_evento.Add(Me)
-					Me._codigo_reservacion = value.codigo_reservacion_eve
-				Else
-					Me._codigo_reservacion = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("tb_reservacion_evento")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_encabezado")>  _
-Partial Public Class tb_encabezado
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _codigo_encabezado As Integer
-	
-	Private _numero_documento As String
-	
-	Private _fecha As System.Nullable(Of Date)
-	
-	Private _total As System.Nullable(Of Integer)
-	
-	Private _tb_detalle_evento As EntitySet(Of tb_detalle_evento)
-	
-	Private _tb_reservacion As EntitySet(Of tb_reservacion)
-	
-    #Region "Definiciones de métodos de extensibilidad"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Oncodigo_encabezadoChanging(value As Integer)
-    End Sub
-    Partial Private Sub Oncodigo_encabezadoChanged()
-    End Sub
-    Partial Private Sub Onnumero_documentoChanging(value As String)
-    End Sub
-    Partial Private Sub Onnumero_documentoChanged()
-    End Sub
-    Partial Private Sub OnfechaChanging(value As System.Nullable(Of Date))
-    End Sub
-    Partial Private Sub OnfechaChanged()
-    End Sub
-    Partial Private Sub OntotalChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OntotalChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._tb_detalle_evento = New EntitySet(Of tb_detalle_evento)(AddressOf Me.attach_tb_detalle_evento, AddressOf Me.detach_tb_detalle_evento)
-		Me._tb_reservacion = New EntitySet(Of tb_reservacion)(AddressOf Me.attach_tb_reservacion, AddressOf Me.detach_tb_reservacion)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_encabezado", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property codigo_encabezado() As Integer
-		Get
-			Return Me._codigo_encabezado
-		End Get
-		Set
-			If ((Me._codigo_encabezado = value)  _
-						= false) Then
-				Me.Oncodigo_encabezadoChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_encabezado = value
-				Me.SendPropertyChanged("codigo_encabezado")
-				Me.Oncodigo_encabezadoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_numero_documento", DbType:="VarChar(20)")>  _
-	Public Property numero_documento() As String
-		Get
-			Return Me._numero_documento
-		End Get
-		Set
-			If (String.Equals(Me._numero_documento, value) = false) Then
-				Me.Onnumero_documentoChanging(value)
-				Me.SendPropertyChanging
-				Me._numero_documento = value
-				Me.SendPropertyChanged("numero_documento")
-				Me.Onnumero_documentoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_fecha", DbType:="Date")>  _
-	Public Property fecha() As System.Nullable(Of Date)
-		Get
-			Return Me._fecha
-		End Get
-		Set
-			If (Me._fecha.Equals(value) = false) Then
-				Me.OnfechaChanging(value)
-				Me.SendPropertyChanging
-				Me._fecha = value
-				Me.SendPropertyChanged("fecha")
-				Me.OnfechaChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_total", DbType:="Int")>  _
-	Public Property total() As System.Nullable(Of Integer)
-		Get
-			Return Me._total
-		End Get
-		Set
-			If (Me._total.Equals(value) = false) Then
-				Me.OntotalChanging(value)
-				Me.SendPropertyChanging
-				Me._total = value
-				Me.SendPropertyChanged("total")
-				Me.OntotalChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_encabezado_tb_detalle_evento", Storage:="_tb_detalle_evento", ThisKey:="codigo_encabezado", OtherKey:="codigo_encabezado")>  _
-	Public Property tb_detalle_evento() As EntitySet(Of tb_detalle_evento)
-		Get
-			Return Me._tb_detalle_evento
-		End Get
-		Set
-			Me._tb_detalle_evento.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_encabezado_tb_reservacion", Storage:="_tb_reservacion", ThisKey:="codigo_encabezado", OtherKey:="codigo_encabezado")>  _
-	Public Property tb_reservacion() As EntitySet(Of tb_reservacion)
-		Get
-			Return Me._tb_reservacion
-		End Get
-		Set
-			Me._tb_reservacion.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_tb_detalle_evento(ByVal entity As tb_detalle_evento)
-		Me.SendPropertyChanging
-		entity.tb_encabezado = Me
-	End Sub
-	
-	Private Sub detach_tb_detalle_evento(ByVal entity As tb_detalle_evento)
-		Me.SendPropertyChanging
-		entity.tb_encabezado = Nothing
-	End Sub
-	
-	Private Sub attach_tb_reservacion(ByVal entity As tb_reservacion)
-		Me.SendPropertyChanging
-		entity.tb_encabezado = Me
-	End Sub
-	
-	Private Sub detach_tb_reservacion(ByVal entity As tb_reservacion)
-		Me.SendPropertyChanging
-		entity.tb_encabezado = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_evento")>  _
-Partial Public Class tb_evento
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _codigo_evento As String
-	
-	Private _nombre As String
-	
-	Private _tb_reservacion_evento As EntitySet(Of tb_reservacion_evento)
-	
-    #Region "Definiciones de métodos de extensibilidad"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Oncodigo_eventoChanging(value As String)
-    End Sub
-    Partial Private Sub Oncodigo_eventoChanged()
-    End Sub
-    Partial Private Sub OnnombreChanging(value As String)
-    End Sub
-    Partial Private Sub OnnombreChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._tb_reservacion_evento = New EntitySet(Of tb_reservacion_evento)(AddressOf Me.attach_tb_reservacion_evento, AddressOf Me.detach_tb_reservacion_evento)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_evento", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property codigo_evento() As String
-		Get
-			Return Me._codigo_evento
-		End Get
-		Set
-			If (String.Equals(Me._codigo_evento, value) = false) Then
-				Me.Oncodigo_eventoChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_evento = value
-				Me.SendPropertyChanged("codigo_evento")
-				Me.Oncodigo_eventoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_nombre", DbType:="NChar(10)")>  _
-	Public Property nombre() As String
-		Get
-			Return Me._nombre
-		End Get
-		Set
-			If (String.Equals(Me._nombre, value) = false) Then
-				Me.OnnombreChanging(value)
-				Me.SendPropertyChanging
-				Me._nombre = value
-				Me.SendPropertyChanged("nombre")
-				Me.OnnombreChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_evento_tb_reservacion_evento", Storage:="_tb_reservacion_evento", ThisKey:="codigo_evento", OtherKey:="codigo_evento")>  _
-	Public Property tb_reservacion_evento() As EntitySet(Of tb_reservacion_evento)
-		Get
-			Return Me._tb_reservacion_evento
-		End Get
-		Set
-			Me._tb_reservacion_evento.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_tb_reservacion_evento(ByVal entity As tb_reservacion_evento)
-		Me.SendPropertyChanging
-		entity.tb_evento = Me
-	End Sub
-	
-	Private Sub detach_tb_reservacion_evento(ByVal entity As tb_reservacion_evento)
-		Me.SendPropertyChanging
-		entity.tb_evento = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_usuarios")>  _
-Partial Public Class tb_usuarios
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _codigo_usuario As Integer
-	
-	Private _nombre As String
-	
-	Private _contraseña As String
-	
-	Private _tb_reservacion As EntitySet(Of tb_reservacion)
-	
-    #Region "Definiciones de métodos de extensibilidad"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Oncodigo_usuarioChanging(value As Integer)
-    End Sub
-    Partial Private Sub Oncodigo_usuarioChanged()
-    End Sub
-    Partial Private Sub OnnombreChanging(value As String)
-    End Sub
-    Partial Private Sub OnnombreChanged()
-    End Sub
-    Partial Private Sub OncontraseñaChanging(value As String)
-    End Sub
-    Partial Private Sub OncontraseñaChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._tb_reservacion = New EntitySet(Of tb_reservacion)(AddressOf Me.attach_tb_reservacion, AddressOf Me.detach_tb_reservacion)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_usuario", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property codigo_usuario() As Integer
-		Get
-			Return Me._codigo_usuario
-		End Get
-		Set
-			If ((Me._codigo_usuario = value)  _
-						= false) Then
-				Me.Oncodigo_usuarioChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_usuario = value
-				Me.SendPropertyChanged("codigo_usuario")
-				Me.Oncodigo_usuarioChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_nombre", DbType:="NChar(75)")>  _
-	Public Property nombre() As String
-		Get
-			Return Me._nombre
-		End Get
-		Set
-			If (String.Equals(Me._nombre, value) = false) Then
-				Me.OnnombreChanging(value)
-				Me.SendPropertyChanging
-				Me._nombre = value
-				Me.SendPropertyChanged("nombre")
-				Me.OnnombreChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_contraseña", DbType:="NChar(75)")>  _
-	Public Property contraseña() As String
-		Get
-			Return Me._contraseña
-		End Get
-		Set
-			If (String.Equals(Me._contraseña, value) = false) Then
-				Me.OncontraseñaChanging(value)
-				Me.SendPropertyChanging
-				Me._contraseña = value
-				Me.SendPropertyChanged("contraseña")
-				Me.OncontraseñaChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_usuarios_tb_reservacion", Storage:="_tb_reservacion", ThisKey:="codigo_usuario", OtherKey:="codigo_usuario")>  _
-	Public Property tb_reservacion() As EntitySet(Of tb_reservacion)
-		Get
-			Return Me._tb_reservacion
-		End Get
-		Set
-			Me._tb_reservacion.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_tb_reservacion(ByVal entity As tb_reservacion)
-		Me.SendPropertyChanging
-		entity.tb_usuarios = Me
-	End Sub
-	
-	Private Sub detach_tb_reservacion(ByVal entity As tb_reservacion)
-		Me.SendPropertyChanging
-		entity.tb_usuarios = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_tipo")>  _
-Partial Public Class tb_tipo
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _codigo_Tipo As String
-	
-	Private _nombre As String
-	
-	Private _cantidad_personas As String
-	
-	Private _tb_habitacion As EntitySet(Of tb_habitacion)
-	
-    #Region "Definiciones de métodos de extensibilidad"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Oncodigo_TipoChanging(value As String)
-    End Sub
-    Partial Private Sub Oncodigo_TipoChanged()
-    End Sub
-    Partial Private Sub OnnombreChanging(value As String)
-    End Sub
-    Partial Private Sub OnnombreChanged()
-    End Sub
-    Partial Private Sub Oncantidad_personasChanging(value As String)
-    End Sub
-    Partial Private Sub Oncantidad_personasChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._tb_habitacion = New EntitySet(Of tb_habitacion)(AddressOf Me.attach_tb_habitacion, AddressOf Me.detach_tb_habitacion)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_Tipo", DbType:="NChar(75) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property codigo_Tipo() As String
-		Get
-			Return Me._codigo_Tipo
-		End Get
-		Set
-			If (String.Equals(Me._codigo_Tipo, value) = false) Then
-				Me.Oncodigo_TipoChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_Tipo = value
-				Me.SendPropertyChanged("codigo_Tipo")
-				Me.Oncodigo_TipoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_nombre", DbType:="NChar(75)")>  _
-	Public Property nombre() As String
-		Get
-			Return Me._nombre
-		End Get
-		Set
-			If (String.Equals(Me._nombre, value) = false) Then
-				Me.OnnombreChanging(value)
-				Me.SendPropertyChanging
-				Me._nombre = value
-				Me.SendPropertyChanged("nombre")
-				Me.OnnombreChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_cantidad_personas", DbType:="NChar(75)")>  _
-	Public Property cantidad_personas() As String
-		Get
-			Return Me._cantidad_personas
-		End Get
-		Set
-			If (String.Equals(Me._cantidad_personas, value) = false) Then
-				Me.Oncantidad_personasChanging(value)
-				Me.SendPropertyChanging
-				Me._cantidad_personas = value
-				Me.SendPropertyChanged("cantidad_personas")
-				Me.Oncantidad_personasChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_tipo_tb_habitacion", Storage:="_tb_habitacion", ThisKey:="codigo_Tipo", OtherKey:="tipo_habitacion")>  _
-	Public Property tb_habitacion() As EntitySet(Of tb_habitacion)
-		Get
-			Return Me._tb_habitacion
-		End Get
-		Set
-			Me._tb_habitacion.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_tb_habitacion(ByVal entity As tb_habitacion)
-		Me.SendPropertyChanging
-		entity.tb_tipo = Me
-	End Sub
-	
-	Private Sub detach_tb_habitacion(ByVal entity As tb_habitacion)
-		Me.SendPropertyChanging
-		entity.tb_tipo = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_detalle_factura")>  _
-Partial Public Class tb_detalle_factura
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _codigo_detalle As String
-	
-	Private _codigo_reservacion As System.Nullable(Of Integer)
-	
-	Private _codigo_habitacion As String
-	
-	Private _tb_habitacion As EntityRef(Of tb_habitacion)
-	
-	Private _tb_reservacion As EntityRef(Of tb_reservacion)
-	
-    #Region "Definiciones de métodos de extensibilidad"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Oncodigo_detalleChanging(value As String)
-    End Sub
-    Partial Private Sub Oncodigo_detalleChanged()
-    End Sub
-    Partial Private Sub Oncodigo_reservacionChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub Oncodigo_reservacionChanged()
-    End Sub
-    Partial Private Sub Oncodigo_habitacionChanging(value As String)
-    End Sub
-    Partial Private Sub Oncodigo_habitacionChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._tb_habitacion = CType(Nothing, EntityRef(Of tb_habitacion))
-		Me._tb_reservacion = CType(Nothing, EntityRef(Of tb_reservacion))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_detalle", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property codigo_detalle() As String
-		Get
-			Return Me._codigo_detalle
-		End Get
-		Set
-			If (String.Equals(Me._codigo_detalle, value) = false) Then
-				Me.Oncodigo_detalleChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_detalle = value
-				Me.SendPropertyChanged("codigo_detalle")
-				Me.Oncodigo_detalleChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_reservacion", DbType:="Int")>  _
-	Public Property codigo_reservacion() As System.Nullable(Of Integer)
-		Get
-			Return Me._codigo_reservacion
-		End Get
-		Set
-			If (Me._codigo_reservacion.Equals(value) = false) Then
-				If Me._tb_reservacion.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.Oncodigo_reservacionChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_reservacion = value
-				Me.SendPropertyChanged("codigo_reservacion")
-				Me.Oncodigo_reservacionChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_habitacion", DbType:="NChar(75)")>  _
-	Public Property codigo_habitacion() As String
-		Get
-			Return Me._codigo_habitacion
-		End Get
-		Set
-			If (String.Equals(Me._codigo_habitacion, value) = false) Then
-				If Me._tb_habitacion.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.Oncodigo_habitacionChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_habitacion = value
-				Me.SendPropertyChanged("codigo_habitacion")
-				Me.Oncodigo_habitacionChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_habitacion_tb_detalle_factura", Storage:="_tb_habitacion", ThisKey:="codigo_habitacion", OtherKey:="codigo_habitacion", IsForeignKey:=true)>  _
-	Public Property tb_habitacion() As tb_habitacion
-		Get
-			Return Me._tb_habitacion.Entity
-		End Get
-		Set
-			Dim previousValue As tb_habitacion = Me._tb_habitacion.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_habitacion.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._tb_habitacion.Entity = Nothing
-					previousValue.tb_detalle_factura.Remove(Me)
-				End If
-				Me._tb_habitacion.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.tb_detalle_factura.Add(Me)
-					Me._codigo_habitacion = value.codigo_habitacion
-				Else
-					Me._codigo_habitacion = CType(Nothing, String)
-				End If
-				Me.SendPropertyChanged("tb_habitacion")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_reservacion_tb_detalle_factura", Storage:="_tb_reservacion", ThisKey:="codigo_reservacion", OtherKey:="codigo_reservacion", IsForeignKey:=true)>  _
-	Public Property tb_reservacion() As tb_reservacion
-		Get
-			Return Me._tb_reservacion.Entity
-		End Get
-		Set
-			Dim previousValue As tb_reservacion = Me._tb_reservacion.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_reservacion.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._tb_reservacion.Entity = Nothing
-					previousValue.tb_detalle_factura.Remove(Me)
-				End If
-				Me._tb_reservacion.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.tb_detalle_factura.Add(Me)
-					Me._codigo_reservacion = value.codigo_reservacion
-				Else
-					Me._codigo_reservacion = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("tb_reservacion")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_habitacion")>  _
@@ -1617,6 +419,573 @@ Partial Public Class tb_habitacion
 	End Sub
 End Class
 
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_tipo")>  _
+Partial Public Class tb_tipo
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _codigo_Tipo As String
+	
+	Private _nombre As String
+	
+	Private _descripcion As String
+	
+	Private _tb_habitacion As EntitySet(Of tb_habitacion)
+	
+    #Region "Definiciones de métodos de extensibilidad"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub Oncodigo_TipoChanging(value As String)
+    End Sub
+    Partial Private Sub Oncodigo_TipoChanged()
+    End Sub
+    Partial Private Sub OnnombreChanging(value As String)
+    End Sub
+    Partial Private Sub OnnombreChanged()
+    End Sub
+    Partial Private Sub OndescripcionChanging(value As String)
+    End Sub
+    Partial Private Sub OndescripcionChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._tb_habitacion = New EntitySet(Of tb_habitacion)(AddressOf Me.attach_tb_habitacion, AddressOf Me.detach_tb_habitacion)
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_Tipo", DbType:="NChar(75) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property codigo_Tipo() As String
+		Get
+			Return Me._codigo_Tipo
+		End Get
+		Set
+			If (String.Equals(Me._codigo_Tipo, value) = false) Then
+				Me.Oncodigo_TipoChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_Tipo = value
+				Me.SendPropertyChanged("codigo_Tipo")
+				Me.Oncodigo_TipoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_nombre", DbType:="NChar(75)")>  _
+	Public Property nombre() As String
+		Get
+			Return Me._nombre
+		End Get
+		Set
+			If (String.Equals(Me._nombre, value) = false) Then
+				Me.OnnombreChanging(value)
+				Me.SendPropertyChanging
+				Me._nombre = value
+				Me.SendPropertyChanged("nombre")
+				Me.OnnombreChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_descripcion", DbType:="NChar(100)")>  _
+	Public Property descripcion() As String
+		Get
+			Return Me._descripcion
+		End Get
+		Set
+			If (String.Equals(Me._descripcion, value) = false) Then
+				Me.OndescripcionChanging(value)
+				Me.SendPropertyChanging
+				Me._descripcion = value
+				Me.SendPropertyChanged("descripcion")
+				Me.OndescripcionChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_tipo_tb_habitacion", Storage:="_tb_habitacion", ThisKey:="codigo_Tipo", OtherKey:="tipo_habitacion")>  _
+	Public Property tb_habitacion() As EntitySet(Of tb_habitacion)
+		Get
+			Return Me._tb_habitacion
+		End Get
+		Set
+			Me._tb_habitacion.Assign(value)
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_tb_habitacion(ByVal entity As tb_habitacion)
+		Me.SendPropertyChanging
+		entity.tb_tipo = Me
+	End Sub
+	
+	Private Sub detach_tb_habitacion(ByVal entity As tb_habitacion)
+		Me.SendPropertyChanging
+		entity.tb_tipo = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_detalle_factura")>  _
+Partial Public Class tb_detalle_factura
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _codigo_detalle As String
+	
+	Private _codigo_reservacion As System.Nullable(Of Integer)
+	
+	Private _codigo_habitacion As String
+	
+	Private _tb_habitacion As EntityRef(Of tb_habitacion)
+	
+	Private _tb_reservacion As EntityRef(Of tb_reservacion)
+	
+    #Region "Definiciones de métodos de extensibilidad"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub Oncodigo_detalleChanging(value As String)
+    End Sub
+    Partial Private Sub Oncodigo_detalleChanged()
+    End Sub
+    Partial Private Sub Oncodigo_reservacionChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub Oncodigo_reservacionChanged()
+    End Sub
+    Partial Private Sub Oncodigo_habitacionChanging(value As String)
+    End Sub
+    Partial Private Sub Oncodigo_habitacionChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._tb_habitacion = CType(Nothing, EntityRef(Of tb_habitacion))
+		Me._tb_reservacion = CType(Nothing, EntityRef(Of tb_reservacion))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_detalle", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property codigo_detalle() As String
+		Get
+			Return Me._codigo_detalle
+		End Get
+		Set
+			If (String.Equals(Me._codigo_detalle, value) = false) Then
+				Me.Oncodigo_detalleChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_detalle = value
+				Me.SendPropertyChanged("codigo_detalle")
+				Me.Oncodigo_detalleChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_reservacion", DbType:="Int")>  _
+	Public Property codigo_reservacion() As System.Nullable(Of Integer)
+		Get
+			Return Me._codigo_reservacion
+		End Get
+		Set
+			If (Me._codigo_reservacion.Equals(value) = false) Then
+				If Me._tb_reservacion.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.Oncodigo_reservacionChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_reservacion = value
+				Me.SendPropertyChanged("codigo_reservacion")
+				Me.Oncodigo_reservacionChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_habitacion", DbType:="NChar(75)")>  _
+	Public Property codigo_habitacion() As String
+		Get
+			Return Me._codigo_habitacion
+		End Get
+		Set
+			If (String.Equals(Me._codigo_habitacion, value) = false) Then
+				If Me._tb_habitacion.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.Oncodigo_habitacionChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_habitacion = value
+				Me.SendPropertyChanged("codigo_habitacion")
+				Me.Oncodigo_habitacionChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_habitacion_tb_detalle_factura", Storage:="_tb_habitacion", ThisKey:="codigo_habitacion", OtherKey:="codigo_habitacion", IsForeignKey:=true)>  _
+	Public Property tb_habitacion() As tb_habitacion
+		Get
+			Return Me._tb_habitacion.Entity
+		End Get
+		Set
+			Dim previousValue As tb_habitacion = Me._tb_habitacion.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._tb_habitacion.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._tb_habitacion.Entity = Nothing
+					previousValue.tb_detalle_factura.Remove(Me)
+				End If
+				Me._tb_habitacion.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.tb_detalle_factura.Add(Me)
+					Me._codigo_habitacion = value.codigo_habitacion
+				Else
+					Me._codigo_habitacion = CType(Nothing, String)
+				End If
+				Me.SendPropertyChanged("tb_habitacion")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_reservacion_tb_detalle_factura", Storage:="_tb_reservacion", ThisKey:="codigo_reservacion", OtherKey:="codigo_reservacion", IsForeignKey:=true)>  _
+	Public Property tb_reservacion() As tb_reservacion
+		Get
+			Return Me._tb_reservacion.Entity
+		End Get
+		Set
+			Dim previousValue As tb_reservacion = Me._tb_reservacion.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._tb_reservacion.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._tb_reservacion.Entity = Nothing
+					previousValue.tb_detalle_factura.Remove(Me)
+				End If
+				Me._tb_reservacion.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.tb_detalle_factura.Add(Me)
+					Me._codigo_reservacion = value.codigo_reservacion
+				Else
+					Me._codigo_reservacion = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("tb_reservacion")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_reservacion")>  _
+Partial Public Class tb_reservacion
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _codigo_reservacion As Integer
+	
+	Private _cantidad_de_personas As Integer
+	
+	Private _fecha_inicio As Date
+	
+	Private _fecha_finalizacion As Date
+	
+	Private _codigo_paquete As String
+	
+	Private _codigo_encabezado As System.Nullable(Of Integer)
+	
+	Private _tb_detalle_factura As EntitySet(Of tb_detalle_factura)
+	
+	Private _tb_paquete As EntityRef(Of tb_paquete)
+	
+	Private _tb_encabezado As EntityRef(Of tb_encabezado)
+	
+    #Region "Definiciones de métodos de extensibilidad"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub Oncodigo_reservacionChanging(value As Integer)
+    End Sub
+    Partial Private Sub Oncodigo_reservacionChanged()
+    End Sub
+    Partial Private Sub Oncantidad_de_personasChanging(value As Integer)
+    End Sub
+    Partial Private Sub Oncantidad_de_personasChanged()
+    End Sub
+    Partial Private Sub Onfecha_inicioChanging(value As Date)
+    End Sub
+    Partial Private Sub Onfecha_inicioChanged()
+    End Sub
+    Partial Private Sub Onfecha_finalizacionChanging(value As Date)
+    End Sub
+    Partial Private Sub Onfecha_finalizacionChanged()
+    End Sub
+    Partial Private Sub Oncodigo_paqueteChanging(value As String)
+    End Sub
+    Partial Private Sub Oncodigo_paqueteChanged()
+    End Sub
+    Partial Private Sub Oncodigo_encabezadoChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub Oncodigo_encabezadoChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._tb_detalle_factura = New EntitySet(Of tb_detalle_factura)(AddressOf Me.attach_tb_detalle_factura, AddressOf Me.detach_tb_detalle_factura)
+		Me._tb_paquete = CType(Nothing, EntityRef(Of tb_paquete))
+		Me._tb_encabezado = CType(Nothing, EntityRef(Of tb_encabezado))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_reservacion", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property codigo_reservacion() As Integer
+		Get
+			Return Me._codigo_reservacion
+		End Get
+		Set
+			If ((Me._codigo_reservacion = value)  _
+						= false) Then
+				Me.Oncodigo_reservacionChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_reservacion = value
+				Me.SendPropertyChanged("codigo_reservacion")
+				Me.Oncodigo_reservacionChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_cantidad_de_personas", DbType:="Int NOT NULL")>  _
+	Public Property cantidad_de_personas() As Integer
+		Get
+			Return Me._cantidad_de_personas
+		End Get
+		Set
+			If ((Me._cantidad_de_personas = value)  _
+						= false) Then
+				Me.Oncantidad_de_personasChanging(value)
+				Me.SendPropertyChanging
+				Me._cantidad_de_personas = value
+				Me.SendPropertyChanged("cantidad_de_personas")
+				Me.Oncantidad_de_personasChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_fecha_inicio", DbType:="Date NOT NULL")>  _
+	Public Property fecha_inicio() As Date
+		Get
+			Return Me._fecha_inicio
+		End Get
+		Set
+			If ((Me._fecha_inicio = value)  _
+						= false) Then
+				Me.Onfecha_inicioChanging(value)
+				Me.SendPropertyChanging
+				Me._fecha_inicio = value
+				Me.SendPropertyChanged("fecha_inicio")
+				Me.Onfecha_inicioChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_fecha_finalizacion", DbType:="Date NOT NULL")>  _
+	Public Property fecha_finalizacion() As Date
+		Get
+			Return Me._fecha_finalizacion
+		End Get
+		Set
+			If ((Me._fecha_finalizacion = value)  _
+						= false) Then
+				Me.Onfecha_finalizacionChanging(value)
+				Me.SendPropertyChanging
+				Me._fecha_finalizacion = value
+				Me.SendPropertyChanged("fecha_finalizacion")
+				Me.Onfecha_finalizacionChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_paquete", DbType:="NChar(75)")>  _
+	Public Property codigo_paquete() As String
+		Get
+			Return Me._codigo_paquete
+		End Get
+		Set
+			If (String.Equals(Me._codigo_paquete, value) = false) Then
+				If Me._tb_paquete.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.Oncodigo_paqueteChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_paquete = value
+				Me.SendPropertyChanged("codigo_paquete")
+				Me.Oncodigo_paqueteChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_encabezado", DbType:="Int")>  _
+	Public Property codigo_encabezado() As System.Nullable(Of Integer)
+		Get
+			Return Me._codigo_encabezado
+		End Get
+		Set
+			If (Me._codigo_encabezado.Equals(value) = false) Then
+				If Me._tb_encabezado.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.Oncodigo_encabezadoChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_encabezado = value
+				Me.SendPropertyChanged("codigo_encabezado")
+				Me.Oncodigo_encabezadoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_reservacion_tb_detalle_factura", Storage:="_tb_detalle_factura", ThisKey:="codigo_reservacion", OtherKey:="codigo_reservacion")>  _
+	Public Property tb_detalle_factura() As EntitySet(Of tb_detalle_factura)
+		Get
+			Return Me._tb_detalle_factura
+		End Get
+		Set
+			Me._tb_detalle_factura.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_paquete_tb_reservacion", Storage:="_tb_paquete", ThisKey:="codigo_paquete", OtherKey:="codigo_paquete", IsForeignKey:=true)>  _
+	Public Property tb_paquete() As tb_paquete
+		Get
+			Return Me._tb_paquete.Entity
+		End Get
+		Set
+			Dim previousValue As tb_paquete = Me._tb_paquete.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._tb_paquete.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._tb_paquete.Entity = Nothing
+					previousValue.tb_reservacion.Remove(Me)
+				End If
+				Me._tb_paquete.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.tb_reservacion.Add(Me)
+					Me._codigo_paquete = value.codigo_paquete
+				Else
+					Me._codigo_paquete = CType(Nothing, String)
+				End If
+				Me.SendPropertyChanged("tb_paquete")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_encabezado_tb_reservacion", Storage:="_tb_encabezado", ThisKey:="codigo_encabezado", OtherKey:="codigo_encabezado", IsForeignKey:=true)>  _
+	Public Property tb_encabezado() As tb_encabezado
+		Get
+			Return Me._tb_encabezado.Entity
+		End Get
+		Set
+			Dim previousValue As tb_encabezado = Me._tb_encabezado.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._tb_encabezado.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._tb_encabezado.Entity = Nothing
+					previousValue.tb_reservacion.Remove(Me)
+				End If
+				Me._tb_encabezado.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.tb_reservacion.Add(Me)
+					Me._codigo_encabezado = value.codigo_encabezado
+				Else
+					Me._codigo_encabezado = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("tb_encabezado")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_tb_detalle_factura(ByVal entity As tb_detalle_factura)
+		Me.SendPropertyChanging
+		entity.tb_reservacion = Me
+	End Sub
+	
+	Private Sub detach_tb_detalle_factura(ByVal entity As tb_detalle_factura)
+		Me.SendPropertyChanging
+		entity.tb_reservacion = Nothing
+	End Sub
+End Class
+
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_paquete")>  _
 Partial Public Class tb_paquete
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
@@ -1745,6 +1114,452 @@ Partial Public Class tb_paquete
 	End Sub
 End Class
 
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_encabezado")>  _
+Partial Public Class tb_encabezado
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _codigo_encabezado As Integer
+	
+	Private _numero_documento As String
+	
+	Private _fecha As System.Nullable(Of Date)
+	
+	Private _total As System.Nullable(Of Integer)
+	
+	Private _codigo_cliente As String
+	
+	Private _tb_reservacion As EntitySet(Of tb_reservacion)
+	
+	Private _tb_reservacion_evento As EntitySet(Of tb_reservacion_evento)
+	
+	Private _tb_cliente As EntityRef(Of tb_cliente)
+	
+    #Region "Definiciones de métodos de extensibilidad"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub Oncodigo_encabezadoChanging(value As Integer)
+    End Sub
+    Partial Private Sub Oncodigo_encabezadoChanged()
+    End Sub
+    Partial Private Sub Onnumero_documentoChanging(value As String)
+    End Sub
+    Partial Private Sub Onnumero_documentoChanged()
+    End Sub
+    Partial Private Sub OnfechaChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnfechaChanged()
+    End Sub
+    Partial Private Sub OntotalChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OntotalChanged()
+    End Sub
+    Partial Private Sub Oncodigo_clienteChanging(value As String)
+    End Sub
+    Partial Private Sub Oncodigo_clienteChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._tb_reservacion = New EntitySet(Of tb_reservacion)(AddressOf Me.attach_tb_reservacion, AddressOf Me.detach_tb_reservacion)
+		Me._tb_reservacion_evento = New EntitySet(Of tb_reservacion_evento)(AddressOf Me.attach_tb_reservacion_evento, AddressOf Me.detach_tb_reservacion_evento)
+		Me._tb_cliente = CType(Nothing, EntityRef(Of tb_cliente))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_encabezado", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property codigo_encabezado() As Integer
+		Get
+			Return Me._codigo_encabezado
+		End Get
+		Set
+			If ((Me._codigo_encabezado = value)  _
+						= false) Then
+				Me.Oncodigo_encabezadoChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_encabezado = value
+				Me.SendPropertyChanged("codigo_encabezado")
+				Me.Oncodigo_encabezadoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_numero_documento", DbType:="VarChar(20)")>  _
+	Public Property numero_documento() As String
+		Get
+			Return Me._numero_documento
+		End Get
+		Set
+			If (String.Equals(Me._numero_documento, value) = false) Then
+				Me.Onnumero_documentoChanging(value)
+				Me.SendPropertyChanging
+				Me._numero_documento = value
+				Me.SendPropertyChanged("numero_documento")
+				Me.Onnumero_documentoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_fecha", DbType:="Date")>  _
+	Public Property fecha() As System.Nullable(Of Date)
+		Get
+			Return Me._fecha
+		End Get
+		Set
+			If (Me._fecha.Equals(value) = false) Then
+				Me.OnfechaChanging(value)
+				Me.SendPropertyChanging
+				Me._fecha = value
+				Me.SendPropertyChanged("fecha")
+				Me.OnfechaChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_total", DbType:="Int")>  _
+	Public Property total() As System.Nullable(Of Integer)
+		Get
+			Return Me._total
+		End Get
+		Set
+			If (Me._total.Equals(value) = false) Then
+				Me.OntotalChanging(value)
+				Me.SendPropertyChanging
+				Me._total = value
+				Me.SendPropertyChanged("total")
+				Me.OntotalChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_cliente", DbType:="NChar(75)")>  _
+	Public Property codigo_cliente() As String
+		Get
+			Return Me._codigo_cliente
+		End Get
+		Set
+			If (String.Equals(Me._codigo_cliente, value) = false) Then
+				If Me._tb_cliente.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.Oncodigo_clienteChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_cliente = value
+				Me.SendPropertyChanged("codigo_cliente")
+				Me.Oncodigo_clienteChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_encabezado_tb_reservacion", Storage:="_tb_reservacion", ThisKey:="codigo_encabezado", OtherKey:="codigo_encabezado")>  _
+	Public Property tb_reservacion() As EntitySet(Of tb_reservacion)
+		Get
+			Return Me._tb_reservacion
+		End Get
+		Set
+			Me._tb_reservacion.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_encabezado_tb_reservacion_evento", Storage:="_tb_reservacion_evento", ThisKey:="codigo_encabezado", OtherKey:="codigo_encabezado")>  _
+	Public Property tb_reservacion_evento() As EntitySet(Of tb_reservacion_evento)
+		Get
+			Return Me._tb_reservacion_evento
+		End Get
+		Set
+			Me._tb_reservacion_evento.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_cliente_tb_encabezado", Storage:="_tb_cliente", ThisKey:="codigo_cliente", OtherKey:="codigo_cliente", IsForeignKey:=true)>  _
+	Public Property tb_cliente() As tb_cliente
+		Get
+			Return Me._tb_cliente.Entity
+		End Get
+		Set
+			Dim previousValue As tb_cliente = Me._tb_cliente.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._tb_cliente.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._tb_cliente.Entity = Nothing
+					previousValue.tb_encabezado.Remove(Me)
+				End If
+				Me._tb_cliente.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.tb_encabezado.Add(Me)
+					Me._codigo_cliente = value.codigo_cliente
+				Else
+					Me._codigo_cliente = CType(Nothing, String)
+				End If
+				Me.SendPropertyChanged("tb_cliente")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_tb_reservacion(ByVal entity As tb_reservacion)
+		Me.SendPropertyChanging
+		entity.tb_encabezado = Me
+	End Sub
+	
+	Private Sub detach_tb_reservacion(ByVal entity As tb_reservacion)
+		Me.SendPropertyChanging
+		entity.tb_encabezado = Nothing
+	End Sub
+	
+	Private Sub attach_tb_reservacion_evento(ByVal entity As tb_reservacion_evento)
+		Me.SendPropertyChanging
+		entity.tb_encabezado = Me
+	End Sub
+	
+	Private Sub detach_tb_reservacion_evento(ByVal entity As tb_reservacion_evento)
+		Me.SendPropertyChanging
+		entity.tb_encabezado = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_cliente")>  _
+Partial Public Class tb_cliente
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _codigo_cliente As String
+	
+	Private _nombre As String
+	
+	Private _apellido As String
+	
+	Private _direccion As String
+	
+	Private _telefono As String
+	
+	Private _correo As String
+	
+	Private _tb_tarjeta As String
+	
+	Private _tb_encabezado As EntitySet(Of tb_encabezado)
+	
+    #Region "Definiciones de métodos de extensibilidad"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub Oncodigo_clienteChanging(value As String)
+    End Sub
+    Partial Private Sub Oncodigo_clienteChanged()
+    End Sub
+    Partial Private Sub OnnombreChanging(value As String)
+    End Sub
+    Partial Private Sub OnnombreChanged()
+    End Sub
+    Partial Private Sub OnapellidoChanging(value As String)
+    End Sub
+    Partial Private Sub OnapellidoChanged()
+    End Sub
+    Partial Private Sub OndireccionChanging(value As String)
+    End Sub
+    Partial Private Sub OndireccionChanged()
+    End Sub
+    Partial Private Sub OntelefonoChanging(value As String)
+    End Sub
+    Partial Private Sub OntelefonoChanged()
+    End Sub
+    Partial Private Sub OncorreoChanging(value As String)
+    End Sub
+    Partial Private Sub OncorreoChanged()
+    End Sub
+    Partial Private Sub Ontb_tarjetaChanging(value As String)
+    End Sub
+    Partial Private Sub Ontb_tarjetaChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._tb_encabezado = New EntitySet(Of tb_encabezado)(AddressOf Me.attach_tb_encabezado, AddressOf Me.detach_tb_encabezado)
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_cliente", DbType:="NChar(75) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property codigo_cliente() As String
+		Get
+			Return Me._codigo_cliente
+		End Get
+		Set
+			If (String.Equals(Me._codigo_cliente, value) = false) Then
+				Me.Oncodigo_clienteChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_cliente = value
+				Me.SendPropertyChanged("codigo_cliente")
+				Me.Oncodigo_clienteChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_nombre", DbType:="NChar(75)")>  _
+	Public Property nombre() As String
+		Get
+			Return Me._nombre
+		End Get
+		Set
+			If (String.Equals(Me._nombre, value) = false) Then
+				Me.OnnombreChanging(value)
+				Me.SendPropertyChanging
+				Me._nombre = value
+				Me.SendPropertyChanged("nombre")
+				Me.OnnombreChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_apellido", DbType:="NChar(75)")>  _
+	Public Property apellido() As String
+		Get
+			Return Me._apellido
+		End Get
+		Set
+			If (String.Equals(Me._apellido, value) = false) Then
+				Me.OnapellidoChanging(value)
+				Me.SendPropertyChanging
+				Me._apellido = value
+				Me.SendPropertyChanged("apellido")
+				Me.OnapellidoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_direccion", DbType:="NChar(75)")>  _
+	Public Property direccion() As String
+		Get
+			Return Me._direccion
+		End Get
+		Set
+			If (String.Equals(Me._direccion, value) = false) Then
+				Me.OndireccionChanging(value)
+				Me.SendPropertyChanging
+				Me._direccion = value
+				Me.SendPropertyChanged("direccion")
+				Me.OndireccionChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_telefono", DbType:="NChar(20)")>  _
+	Public Property telefono() As String
+		Get
+			Return Me._telefono
+		End Get
+		Set
+			If (String.Equals(Me._telefono, value) = false) Then
+				Me.OntelefonoChanging(value)
+				Me.SendPropertyChanging
+				Me._telefono = value
+				Me.SendPropertyChanged("telefono")
+				Me.OntelefonoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_correo", DbType:="NChar(20)")>  _
+	Public Property correo() As String
+		Get
+			Return Me._correo
+		End Get
+		Set
+			If (String.Equals(Me._correo, value) = false) Then
+				Me.OncorreoChanging(value)
+				Me.SendPropertyChanging
+				Me._correo = value
+				Me.SendPropertyChanged("correo")
+				Me.OncorreoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_tb_tarjeta", DbType:="NChar(75)")>  _
+	Public Property tb_tarjeta() As String
+		Get
+			Return Me._tb_tarjeta
+		End Get
+		Set
+			If (String.Equals(Me._tb_tarjeta, value) = false) Then
+				Me.Ontb_tarjetaChanging(value)
+				Me.SendPropertyChanging
+				Me._tb_tarjeta = value
+				Me.SendPropertyChanged("tb_tarjeta")
+				Me.Ontb_tarjetaChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_cliente_tb_encabezado", Storage:="_tb_encabezado", ThisKey:="codigo_cliente", OtherKey:="codigo_cliente")>  _
+	Public Property tb_encabezado() As EntitySet(Of tb_encabezado)
+		Get
+			Return Me._tb_encabezado
+		End Get
+		Set
+			Me._tb_encabezado.Assign(value)
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_tb_encabezado(ByVal entity As tb_encabezado)
+		Me.SendPropertyChanging
+		entity.tb_cliente = Me
+	End Sub
+	
+	Private Sub detach_tb_encabezado(ByVal entity As tb_encabezado)
+		Me.SendPropertyChanging
+		entity.tb_cliente = Nothing
+	End Sub
+End Class
+
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_reservacion_evento")>  _
 Partial Public Class tb_reservacion_evento
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
@@ -1765,11 +1580,13 @@ Partial Public Class tb_reservacion_evento
 	
 	Private _codigo_salon As String
 	
-	Private _tb_detalle_evento As EntitySet(Of tb_detalle_evento)
+	Private _codigo_encabezado As System.Nullable(Of Integer)
 	
-	Private _tb_evento As EntityRef(Of tb_evento)
+	Private _tb_encabezado As EntityRef(Of tb_encabezado)
 	
 	Private _tb_salon As EntityRef(Of tb_salon)
+	
+	Private _tb_evento As EntityRef(Of tb_evento)
 	
     #Region "Definiciones de métodos de extensibilidad"
     Partial Private Sub OnLoaded()
@@ -1806,13 +1623,17 @@ Partial Public Class tb_reservacion_evento
     End Sub
     Partial Private Sub Oncodigo_salonChanged()
     End Sub
+    Partial Private Sub Oncodigo_encabezadoChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub Oncodigo_encabezadoChanged()
+    End Sub
     #End Region
 	
 	Public Sub New()
 		MyBase.New
-		Me._tb_detalle_evento = New EntitySet(Of tb_detalle_evento)(AddressOf Me.attach_tb_detalle_evento, AddressOf Me.detach_tb_detalle_evento)
-		Me._tb_evento = CType(Nothing, EntityRef(Of tb_evento))
+		Me._tb_encabezado = CType(Nothing, EntityRef(Of tb_encabezado))
 		Me._tb_salon = CType(Nothing, EntityRef(Of tb_salon))
+		Me._tb_evento = CType(Nothing, EntityRef(Of tb_evento))
 		OnCreated
 	End Sub
 	
@@ -1935,40 +1756,49 @@ Partial Public Class tb_reservacion_evento
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_reservacion_evento_tb_detalle_evento", Storage:="_tb_detalle_evento", ThisKey:="codigo_reservacion_eve", OtherKey:="codigo_reservacion")>  _
-	Public Property tb_detalle_evento() As EntitySet(Of tb_detalle_evento)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_encabezado", DbType:="Int")>  _
+	Public Property codigo_encabezado() As System.Nullable(Of Integer)
 		Get
-			Return Me._tb_detalle_evento
+			Return Me._codigo_encabezado
 		End Get
 		Set
-			Me._tb_detalle_evento.Assign(value)
+			If (Me._codigo_encabezado.Equals(value) = false) Then
+				If Me._tb_encabezado.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.Oncodigo_encabezadoChanging(value)
+				Me.SendPropertyChanging
+				Me._codigo_encabezado = value
+				Me.SendPropertyChanged("codigo_encabezado")
+				Me.Oncodigo_encabezadoChanged
+			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_evento_tb_reservacion_evento", Storage:="_tb_evento", ThisKey:="codigo_evento", OtherKey:="codigo_evento", IsForeignKey:=true)>  _
-	Public Property tb_evento() As tb_evento
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_encabezado_tb_reservacion_evento", Storage:="_tb_encabezado", ThisKey:="codigo_encabezado", OtherKey:="codigo_encabezado", IsForeignKey:=true)>  _
+	Public Property tb_encabezado() As tb_encabezado
 		Get
-			Return Me._tb_evento.Entity
+			Return Me._tb_encabezado.Entity
 		End Get
 		Set
-			Dim previousValue As tb_evento = Me._tb_evento.Entity
+			Dim previousValue As tb_encabezado = Me._tb_encabezado.Entity
 			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_evento.HasLoadedOrAssignedValue = false)) Then
+						OrElse (Me._tb_encabezado.HasLoadedOrAssignedValue = false)) Then
 				Me.SendPropertyChanging
 				If ((previousValue Is Nothing)  _
 							= false) Then
-					Me._tb_evento.Entity = Nothing
+					Me._tb_encabezado.Entity = Nothing
 					previousValue.tb_reservacion_evento.Remove(Me)
 				End If
-				Me._tb_evento.Entity = value
+				Me._tb_encabezado.Entity = value
 				If ((value Is Nothing)  _
 							= false) Then
 					value.tb_reservacion_evento.Add(Me)
-					Me._codigo_evento = value.codigo_evento
+					Me._codigo_encabezado = value.codigo_encabezado
 				Else
-					Me._codigo_evento = CType(Nothing, String)
+					Me._codigo_encabezado = CType(Nothing, Nullable(Of Integer))
 				End If
-				Me.SendPropertyChanged("tb_evento")
+				Me.SendPropertyChanged("tb_encabezado")
 			End If
 		End Set
 	End Property
@@ -2001,6 +1831,34 @@ Partial Public Class tb_reservacion_evento
 		End Set
 	End Property
 	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_evento_tb_reservacion_evento", Storage:="_tb_evento", ThisKey:="codigo_evento", OtherKey:="codigo_evento", IsForeignKey:=true)>  _
+	Public Property tb_evento() As tb_evento
+		Get
+			Return Me._tb_evento.Entity
+		End Get
+		Set
+			Dim previousValue As tb_evento = Me._tb_evento.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._tb_evento.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._tb_evento.Entity = Nothing
+					previousValue.tb_reservacion_evento.Remove(Me)
+				End If
+				Me._tb_evento.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.tb_reservacion_evento.Add(Me)
+					Me._codigo_evento = value.codigo_evento
+				Else
+					Me._codigo_evento = CType(Nothing, String)
+				End If
+				Me.SendPropertyChanged("tb_evento")
+			End If
+		End Set
+	End Property
+	
 	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
 	
 	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
@@ -2017,16 +1875,6 @@ Partial Public Class tb_reservacion_evento
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
-	End Sub
-	
-	Private Sub attach_tb_detalle_evento(ByVal entity As tb_detalle_evento)
-		Me.SendPropertyChanging
-		entity.tb_reservacion_evento = Me
-	End Sub
-	
-	Private Sub detach_tb_detalle_evento(ByVal entity As tb_detalle_evento)
-		Me.SendPropertyChanging
-		entity.tb_reservacion_evento = Nothing
 	End Sub
 End Class
 
@@ -2158,41 +2006,17 @@ Partial Public Class tb_salon
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_reservacion")>  _
-Partial Public Class tb_reservacion
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_evento")>  _
+Partial Public Class tb_evento
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
 	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
 	
-	Private _codigo_reservacion As Integer
+	Private _codigo_evento As String
 	
-	Private _cantidad_de_personas As Integer
+	Private _nombre As String
 	
-	Private _fecha_inicio As Date
-	
-	Private _fecha_finalizacion As Date
-	
-	Private _codigo_usuario As System.Nullable(Of Integer)
-	
-	Private _codigo_tarjeta As System.Nullable(Of Integer)
-	
-	Private _codigo_cliente As String
-	
-	Private _codigo_paquete As String
-	
-	Private _codigo_encabezado As System.Nullable(Of Integer)
-	
-	Private _tb_detalle_factura As EntitySet(Of tb_detalle_factura)
-	
-	Private _tb_cliente As EntityRef(Of tb_cliente)
-	
-	Private _tb_encabezado As EntityRef(Of tb_encabezado)
-	
-	Private _tb_paquete As EntityRef(Of tb_paquete)
-	
-	Private _tb_usuarios As EntityRef(Of tb_usuarios)
-	
-	Private _tb_tarjeta As EntityRef(Of tb_tarjeta)
+	Private _tb_reservacion_evento As EntitySet(Of tb_reservacion_evento)
 	
     #Region "Definiciones de métodos de extensibilidad"
     Partial Private Sub OnLoaded()
@@ -2201,133 +2025,139 @@ Partial Public Class tb_reservacion
     End Sub
     Partial Private Sub OnCreated()
     End Sub
-    Partial Private Sub Oncodigo_reservacionChanging(value As Integer)
+    Partial Private Sub Oncodigo_eventoChanging(value As String)
     End Sub
-    Partial Private Sub Oncodigo_reservacionChanged()
+    Partial Private Sub Oncodigo_eventoChanged()
     End Sub
-    Partial Private Sub Oncantidad_de_personasChanging(value As Integer)
+    Partial Private Sub OnnombreChanging(value As String)
     End Sub
-    Partial Private Sub Oncantidad_de_personasChanged()
-    End Sub
-    Partial Private Sub Onfecha_inicioChanging(value As Date)
-    End Sub
-    Partial Private Sub Onfecha_inicioChanged()
-    End Sub
-    Partial Private Sub Onfecha_finalizacionChanging(value As Date)
-    End Sub
-    Partial Private Sub Onfecha_finalizacionChanged()
-    End Sub
-    Partial Private Sub Oncodigo_usuarioChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub Oncodigo_usuarioChanged()
-    End Sub
-    Partial Private Sub Oncodigo_tarjetaChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub Oncodigo_tarjetaChanged()
-    End Sub
-    Partial Private Sub Oncodigo_clienteChanging(value As String)
-    End Sub
-    Partial Private Sub Oncodigo_clienteChanged()
-    End Sub
-    Partial Private Sub Oncodigo_paqueteChanging(value As String)
-    End Sub
-    Partial Private Sub Oncodigo_paqueteChanged()
-    End Sub
-    Partial Private Sub Oncodigo_encabezadoChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub Oncodigo_encabezadoChanged()
+    Partial Private Sub OnnombreChanged()
     End Sub
     #End Region
 	
 	Public Sub New()
 		MyBase.New
-		Me._tb_detalle_factura = New EntitySet(Of tb_detalle_factura)(AddressOf Me.attach_tb_detalle_factura, AddressOf Me.detach_tb_detalle_factura)
-		Me._tb_cliente = CType(Nothing, EntityRef(Of tb_cliente))
-		Me._tb_encabezado = CType(Nothing, EntityRef(Of tb_encabezado))
-		Me._tb_paquete = CType(Nothing, EntityRef(Of tb_paquete))
-		Me._tb_usuarios = CType(Nothing, EntityRef(Of tb_usuarios))
-		Me._tb_tarjeta = CType(Nothing, EntityRef(Of tb_tarjeta))
+		Me._tb_reservacion_evento = New EntitySet(Of tb_reservacion_evento)(AddressOf Me.attach_tb_reservacion_evento, AddressOf Me.detach_tb_reservacion_evento)
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_reservacion", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property codigo_reservacion() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_evento", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property codigo_evento() As String
 		Get
-			Return Me._codigo_reservacion
+			Return Me._codigo_evento
 		End Get
 		Set
-			If ((Me._codigo_reservacion = value)  _
-						= false) Then
-				Me.Oncodigo_reservacionChanging(value)
+			If (String.Equals(Me._codigo_evento, value) = false) Then
+				Me.Oncodigo_eventoChanging(value)
 				Me.SendPropertyChanging
-				Me._codigo_reservacion = value
-				Me.SendPropertyChanged("codigo_reservacion")
-				Me.Oncodigo_reservacionChanged
+				Me._codigo_evento = value
+				Me.SendPropertyChanged("codigo_evento")
+				Me.Oncodigo_eventoChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_cantidad_de_personas", DbType:="Int NOT NULL")>  _
-	Public Property cantidad_de_personas() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_nombre", DbType:="NChar(10)")>  _
+	Public Property nombre() As String
 		Get
-			Return Me._cantidad_de_personas
+			Return Me._nombre
 		End Get
 		Set
-			If ((Me._cantidad_de_personas = value)  _
-						= false) Then
-				Me.Oncantidad_de_personasChanging(value)
+			If (String.Equals(Me._nombre, value) = false) Then
+				Me.OnnombreChanging(value)
 				Me.SendPropertyChanging
-				Me._cantidad_de_personas = value
-				Me.SendPropertyChanged("cantidad_de_personas")
-				Me.Oncantidad_de_personasChanged
+				Me._nombre = value
+				Me.SendPropertyChanged("nombre")
+				Me.OnnombreChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_fecha_inicio", DbType:="Date NOT NULL")>  _
-	Public Property fecha_inicio() As Date
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_evento_tb_reservacion_evento", Storage:="_tb_reservacion_evento", ThisKey:="codigo_evento", OtherKey:="codigo_evento")>  _
+	Public Property tb_reservacion_evento() As EntitySet(Of tb_reservacion_evento)
 		Get
-			Return Me._fecha_inicio
+			Return Me._tb_reservacion_evento
 		End Get
 		Set
-			If ((Me._fecha_inicio = value)  _
-						= false) Then
-				Me.Onfecha_inicioChanging(value)
-				Me.SendPropertyChanging
-				Me._fecha_inicio = value
-				Me.SendPropertyChanged("fecha_inicio")
-				Me.Onfecha_inicioChanged
-			End If
+			Me._tb_reservacion_evento.Assign(value)
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_fecha_finalizacion", DbType:="Date NOT NULL")>  _
-	Public Property fecha_finalizacion() As Date
-		Get
-			Return Me._fecha_finalizacion
-		End Get
-		Set
-			If ((Me._fecha_finalizacion = value)  _
-						= false) Then
-				Me.Onfecha_finalizacionChanging(value)
-				Me.SendPropertyChanging
-				Me._fecha_finalizacion = value
-				Me.SendPropertyChanged("fecha_finalizacion")
-				Me.Onfecha_finalizacionChanged
-			End If
-		End Set
-	End Property
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_usuario", DbType:="Int")>  _
-	Public Property codigo_usuario() As System.Nullable(Of Integer)
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_tb_reservacion_evento(ByVal entity As tb_reservacion_evento)
+		Me.SendPropertyChanging
+		entity.tb_evento = Me
+	End Sub
+	
+	Private Sub detach_tb_reservacion_evento(ByVal entity As tb_reservacion_evento)
+		Me.SendPropertyChanging
+		entity.tb_evento = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_usuarios")>  _
+Partial Public Class tb_usuarios
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _codigo_usuario As Integer
+	
+	Private _nombre As String
+	
+	Private _contraseña As String
+	
+    #Region "Definiciones de métodos de extensibilidad"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub Oncodigo_usuarioChanging(value As Integer)
+    End Sub
+    Partial Private Sub Oncodigo_usuarioChanged()
+    End Sub
+    Partial Private Sub OnnombreChanging(value As String)
+    End Sub
+    Partial Private Sub OnnombreChanged()
+    End Sub
+    Partial Private Sub OncontraseñaChanging(value As String)
+    End Sub
+    Partial Private Sub OncontraseñaChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_usuario", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property codigo_usuario() As Integer
 		Get
 			Return Me._codigo_usuario
 		End Get
 		Set
-			If (Me._codigo_usuario.Equals(value) = false) Then
-				If Me._tb_usuarios.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
+			If ((Me._codigo_usuario = value)  _
+						= false) Then
 				Me.Oncodigo_usuarioChanging(value)
 				Me.SendPropertyChanging
 				Me._codigo_usuario = value
@@ -2337,228 +2167,34 @@ Partial Public Class tb_reservacion
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_tarjeta", DbType:="Int")>  _
-	Public Property codigo_tarjeta() As System.Nullable(Of Integer)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_nombre", DbType:="NChar(75)")>  _
+	Public Property nombre() As String
 		Get
-			Return Me._codigo_tarjeta
+			Return Me._nombre
 		End Get
 		Set
-			If (Me._codigo_tarjeta.Equals(value) = false) Then
-				If Me._tb_tarjeta.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.Oncodigo_tarjetaChanging(value)
+			If (String.Equals(Me._nombre, value) = false) Then
+				Me.OnnombreChanging(value)
 				Me.SendPropertyChanging
-				Me._codigo_tarjeta = value
-				Me.SendPropertyChanged("codigo_tarjeta")
-				Me.Oncodigo_tarjetaChanged
+				Me._nombre = value
+				Me.SendPropertyChanged("nombre")
+				Me.OnnombreChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_cliente", DbType:="NChar(75)")>  _
-	Public Property codigo_cliente() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_contraseña", DbType:="NChar(75)")>  _
+	Public Property contraseña() As String
 		Get
-			Return Me._codigo_cliente
+			Return Me._contraseña
 		End Get
 		Set
-			If (String.Equals(Me._codigo_cliente, value) = false) Then
-				If Me._tb_cliente.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.Oncodigo_clienteChanging(value)
+			If (String.Equals(Me._contraseña, value) = false) Then
+				Me.OncontraseñaChanging(value)
 				Me.SendPropertyChanging
-				Me._codigo_cliente = value
-				Me.SendPropertyChanged("codigo_cliente")
-				Me.Oncodigo_clienteChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_paquete", DbType:="NChar(75)")>  _
-	Public Property codigo_paquete() As String
-		Get
-			Return Me._codigo_paquete
-		End Get
-		Set
-			If (String.Equals(Me._codigo_paquete, value) = false) Then
-				If Me._tb_paquete.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.Oncodigo_paqueteChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_paquete = value
-				Me.SendPropertyChanged("codigo_paquete")
-				Me.Oncodigo_paqueteChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_encabezado", DbType:="Int")>  _
-	Public Property codigo_encabezado() As System.Nullable(Of Integer)
-		Get
-			Return Me._codigo_encabezado
-		End Get
-		Set
-			If (Me._codigo_encabezado.Equals(value) = false) Then
-				If Me._tb_encabezado.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.Oncodigo_encabezadoChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_encabezado = value
-				Me.SendPropertyChanged("codigo_encabezado")
-				Me.Oncodigo_encabezadoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_reservacion_tb_detalle_factura", Storage:="_tb_detalle_factura", ThisKey:="codigo_reservacion", OtherKey:="codigo_reservacion")>  _
-	Public Property tb_detalle_factura() As EntitySet(Of tb_detalle_factura)
-		Get
-			Return Me._tb_detalle_factura
-		End Get
-		Set
-			Me._tb_detalle_factura.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_cliente_tb_reservacion", Storage:="_tb_cliente", ThisKey:="codigo_cliente", OtherKey:="codigo_cliente", IsForeignKey:=true)>  _
-	Public Property tb_cliente() As tb_cliente
-		Get
-			Return Me._tb_cliente.Entity
-		End Get
-		Set
-			Dim previousValue As tb_cliente = Me._tb_cliente.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_cliente.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._tb_cliente.Entity = Nothing
-					previousValue.tb_reservacion.Remove(Me)
-				End If
-				Me._tb_cliente.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.tb_reservacion.Add(Me)
-					Me._codigo_cliente = value.codigo_cliente
-				Else
-					Me._codigo_cliente = CType(Nothing, String)
-				End If
-				Me.SendPropertyChanged("tb_cliente")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_encabezado_tb_reservacion", Storage:="_tb_encabezado", ThisKey:="codigo_encabezado", OtherKey:="codigo_encabezado", IsForeignKey:=true)>  _
-	Public Property tb_encabezado() As tb_encabezado
-		Get
-			Return Me._tb_encabezado.Entity
-		End Get
-		Set
-			Dim previousValue As tb_encabezado = Me._tb_encabezado.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_encabezado.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._tb_encabezado.Entity = Nothing
-					previousValue.tb_reservacion.Remove(Me)
-				End If
-				Me._tb_encabezado.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.tb_reservacion.Add(Me)
-					Me._codigo_encabezado = value.codigo_encabezado
-				Else
-					Me._codigo_encabezado = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("tb_encabezado")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_paquete_tb_reservacion", Storage:="_tb_paquete", ThisKey:="codigo_paquete", OtherKey:="codigo_paquete", IsForeignKey:=true)>  _
-	Public Property tb_paquete() As tb_paquete
-		Get
-			Return Me._tb_paquete.Entity
-		End Get
-		Set
-			Dim previousValue As tb_paquete = Me._tb_paquete.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_paquete.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._tb_paquete.Entity = Nothing
-					previousValue.tb_reservacion.Remove(Me)
-				End If
-				Me._tb_paquete.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.tb_reservacion.Add(Me)
-					Me._codigo_paquete = value.codigo_paquete
-				Else
-					Me._codigo_paquete = CType(Nothing, String)
-				End If
-				Me.SendPropertyChanged("tb_paquete")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_usuarios_tb_reservacion", Storage:="_tb_usuarios", ThisKey:="codigo_usuario", OtherKey:="codigo_usuario", IsForeignKey:=true)>  _
-	Public Property tb_usuarios() As tb_usuarios
-		Get
-			Return Me._tb_usuarios.Entity
-		End Get
-		Set
-			Dim previousValue As tb_usuarios = Me._tb_usuarios.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_usuarios.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._tb_usuarios.Entity = Nothing
-					previousValue.tb_reservacion.Remove(Me)
-				End If
-				Me._tb_usuarios.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.tb_reservacion.Add(Me)
-					Me._codigo_usuario = value.codigo_usuario
-				Else
-					Me._codigo_usuario = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("tb_usuarios")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_tarjeta_tb_reservacion", Storage:="_tb_tarjeta", ThisKey:="codigo_tarjeta", OtherKey:="codigo_tarjeta", IsForeignKey:=true)>  _
-	Public Property tb_tarjeta() As tb_tarjeta
-		Get
-			Return Me._tb_tarjeta.Entity
-		End Get
-		Set
-			Dim previousValue As tb_tarjeta = Me._tb_tarjeta.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._tb_tarjeta.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._tb_tarjeta.Entity = Nothing
-					previousValue.tb_reservacion.Remove(Me)
-				End If
-				Me._tb_tarjeta.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.tb_reservacion.Add(Me)
-					Me._codigo_tarjeta = value.codigo_tarjeta
-				Else
-					Me._codigo_tarjeta = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("tb_tarjeta")
+				Me._contraseña = value
+				Me.SendPropertyChanged("contraseña")
+				Me.OncontraseñaChanged
 			End If
 		End Set
 	End Property
@@ -2579,144 +2215,5 @@ Partial Public Class tb_reservacion
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
-	End Sub
-	
-	Private Sub attach_tb_detalle_factura(ByVal entity As tb_detalle_factura)
-		Me.SendPropertyChanging
-		entity.tb_reservacion = Me
-	End Sub
-	
-	Private Sub detach_tb_detalle_factura(ByVal entity As tb_detalle_factura)
-		Me.SendPropertyChanging
-		entity.tb_reservacion = Nothing
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tb_tarjeta")>  _
-Partial Public Class tb_tarjeta
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _codigo_tarjeta As Integer
-	
-	Private _titular As String
-	
-	Private _numero_tarjeta As String
-	
-	Private _tb_reservacion As EntitySet(Of tb_reservacion)
-	
-    #Region "Definiciones de métodos de extensibilidad"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Oncodigo_tarjetaChanging(value As Integer)
-    End Sub
-    Partial Private Sub Oncodigo_tarjetaChanged()
-    End Sub
-    Partial Private Sub OntitularChanging(value As String)
-    End Sub
-    Partial Private Sub OntitularChanged()
-    End Sub
-    Partial Private Sub Onnumero_tarjetaChanging(value As String)
-    End Sub
-    Partial Private Sub Onnumero_tarjetaChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._tb_reservacion = New EntitySet(Of tb_reservacion)(AddressOf Me.attach_tb_reservacion, AddressOf Me.detach_tb_reservacion)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_codigo_tarjeta", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property codigo_tarjeta() As Integer
-		Get
-			Return Me._codigo_tarjeta
-		End Get
-		Set
-			If ((Me._codigo_tarjeta = value)  _
-						= false) Then
-				Me.Oncodigo_tarjetaChanging(value)
-				Me.SendPropertyChanging
-				Me._codigo_tarjeta = value
-				Me.SendPropertyChanged("codigo_tarjeta")
-				Me.Oncodigo_tarjetaChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_titular", DbType:="NChar(75)")>  _
-	Public Property titular() As String
-		Get
-			Return Me._titular
-		End Get
-		Set
-			If (String.Equals(Me._titular, value) = false) Then
-				Me.OntitularChanging(value)
-				Me.SendPropertyChanging
-				Me._titular = value
-				Me.SendPropertyChanged("titular")
-				Me.OntitularChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_numero_tarjeta", DbType:="NChar(30)")>  _
-	Public Property numero_tarjeta() As String
-		Get
-			Return Me._numero_tarjeta
-		End Get
-		Set
-			If (String.Equals(Me._numero_tarjeta, value) = false) Then
-				Me.Onnumero_tarjetaChanging(value)
-				Me.SendPropertyChanging
-				Me._numero_tarjeta = value
-				Me.SendPropertyChanged("numero_tarjeta")
-				Me.Onnumero_tarjetaChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="tb_tarjeta_tb_reservacion", Storage:="_tb_reservacion", ThisKey:="codigo_tarjeta", OtherKey:="codigo_tarjeta")>  _
-	Public Property tb_reservacion() As EntitySet(Of tb_reservacion)
-		Get
-			Return Me._tb_reservacion
-		End Get
-		Set
-			Me._tb_reservacion.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_tb_reservacion(ByVal entity As tb_reservacion)
-		Me.SendPropertyChanging
-		entity.tb_tarjeta = Me
-	End Sub
-	
-	Private Sub detach_tb_reservacion(ByVal entity As tb_reservacion)
-		Me.SendPropertyChanging
-		entity.tb_tarjeta = Nothing
 	End Sub
 End Class

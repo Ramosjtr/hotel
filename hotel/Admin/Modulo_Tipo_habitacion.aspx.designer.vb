@@ -77,6 +77,24 @@ Partial Public Class Modulo_Tipo_habitacion
     Protected WithEvents Button9 As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
+    '''Control GridView1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control SqlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
     '''Control Button1.
     '''</summary>
     '''<remarks>
@@ -131,13 +149,13 @@ Partial Public Class Modulo_Tipo_habitacion
     Protected WithEvents nombre As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control cantidad_personas.
+    '''Control descripcion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cantidad_personas As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents descripcion As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Button4.

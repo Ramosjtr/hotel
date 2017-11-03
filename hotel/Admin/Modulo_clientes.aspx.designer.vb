@@ -77,6 +77,24 @@ Partial Public Class Modulo_clientes
     Protected WithEvents Button9 As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
+    '''Control GridView1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control SqlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+    
+    '''<summary>
     '''Control Button11.
     '''</summary>
     '''<remarks>
@@ -165,6 +183,15 @@ Partial Public Class Modulo_clientes
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents correo As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control tarjeta.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents tarjeta As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Button4.

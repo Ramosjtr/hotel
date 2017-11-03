@@ -1,10 +1,10 @@
-﻿Public Class Modulo_clientes
+﻿Imports System.Data
+Public Class Modulo_clientes
     Inherits System.Web.UI.Page
     Dim nuevo_cliente As New Bd_orquideasDataContext
     Dim cliente As New tb_cliente
-
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
     End Sub
     'abrir modal nuevo cliente
     Protected Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
@@ -23,7 +23,7 @@
             .direccion = direccion.Text
             .telefono = telefono.Text
             .correo = correo.Text
-
+            .tb_tarjeta = tarjeta.Text
         End With
         nuevo_cliente.tb_cliente.InsertOnSubmit(cliente)
         nuevo_cliente.SubmitChanges()
@@ -35,8 +35,5 @@
         correo.Text = ""
         Button11_ModalPopupExtender.Hide()
         MsgBox("Guardado Correctamente")
-
     End Sub
-
-
 End Class
