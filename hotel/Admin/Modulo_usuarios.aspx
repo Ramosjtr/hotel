@@ -21,7 +21,7 @@
     <ul class="list-group height:1px">
     <li class="list-group-item">
         <!--aca va el gridview-->
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="codigo_usuario" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="codigo_usuario"  ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:BoundField DataField="codigo_usuario" HeaderText="Codigo De Usuario" ReadOnly="True" SortExpression="codigo_usuario" />
@@ -49,8 +49,6 @@
     <ajaxToolkit:ModalPopupExtender ID="Button1_ModalPopupExtender" runat="server" BehaviorID="Button1_ModalPopupExtender" DynamicServicePath="" TargetControlID="Button1" BackgroundCssClass="modalbakground" PopupControlID="panel1">
     </ajaxToolkit:ModalPopupExtender>
       <asp:Panel ID="Panel1" runat="server" style="display:none; background: white; Width:50%; height:auto">
-            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                <ContentTemplate>
                      <div class="modal-header">
                           <h3 id="mymodallabel" >Nuevo Usuario</h3>
                        </div>
@@ -75,8 +73,6 @@
                             <asp:Button ID="Button4" runat="server" Text="close" class="btn" data-dismiss="modal" aria-hidden="true" />
                             <asp:Button ID="Button5" runat="server" Text="Guardar" CssClass="btn btn-success" />
                        </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>
         </asp:Panel>
  
 

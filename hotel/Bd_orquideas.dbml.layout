@@ -112,13 +112,13 @@
         <classShapeMoniker Id="b726ca7e-3c87-45ea-8558-9f1b640901ba" />
       </nodes>
     </associationConnector>
-    <classShape Id="b58b4557-41eb-4488-8b5f-8ca9aed62890" isExpanded="false" absoluteBounds="24.625, 2.25, 2, 0.45">
+    <classShape Id="b58b4557-41eb-4488-8b5f-8ca9aed62890" absoluteBounds="24.625, 2.25, 2, 1.1939925130208331">
       <DataClassMoniker Name="/Bd_orquideasDataContext/tb_evento" />
       <nestedChildShapes>
         <elementListCompartment Id="d8354321-4f89-41e0-bcae-b75e519cef7a" absoluteBounds="24.64, 2.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(24.625 : 2.5375); (23.375 : 2.5375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(24.625 : 2.6); (23.375 : 2.6)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/Bd_orquideasDataContext/tb_evento/tb_evento_tb_reservacion_evento" />
       <nodes>
         <classShapeMoniker Id="b58b4557-41eb-4488-8b5f-8ca9aed62890" />

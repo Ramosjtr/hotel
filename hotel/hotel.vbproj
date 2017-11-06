@@ -200,6 +200,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\footable.bootstrap.min.css" />
+    <Content Include="Content\materialize.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\skin-blue.min.css" />
     <Content Include="Content\style_login.css" />

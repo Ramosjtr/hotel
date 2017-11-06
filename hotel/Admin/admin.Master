@@ -229,11 +229,11 @@
          <script src="../Scripts/adminlte.min.js"></script>
          <script src="../Scripts/bootstrap.min.js"></script>
          <script src="../Scripts/footable.min.js"></script>
-          <script type="text/javascript">
+         <!-- <script type="text/javascript">
              $(function () {
                  $('[id*=GridView1]').footable();
              });
-        </script>
+        </script>-->
          </form>
 </body>
 </html>

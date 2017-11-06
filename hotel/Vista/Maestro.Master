@@ -1,8 +1,5 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Maestro.Master.vb" Inherits="hotel." %>
-
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Maestro.Master.vb" Inherits="hotel.Vista" %>
 <!DOCTYPE html>
-
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -12,7 +9,7 @@
     <meta name="author" content="http://webthemez.com" />
     <!-- css -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <link href="../Content/materialize.min.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
     <link href="css/flexslider.css" rel="stylesheet" />
