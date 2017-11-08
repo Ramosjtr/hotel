@@ -8,25 +8,26 @@
 <div class="panel  panel-primary">
 <%--  <div class="panel-heading">Listado De Proveedores</div>--%>
       <div class="panel-heading">
-    <h3 class="panel-title">plantilla</h3>
+    <h3 class="panel-title">Modulo Salon</h3>
   </div>
   <div class="panel-body">
  <asp:Label ID="Label2" runat="server" Text="buscar: "></asp:Label>
                     <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
-                    <asp:Button ID="Button3" runat="server" Text="B" CssClass="btn btn-info btn-sm" />
-                    <asp:Button ID="Button8" runat="server" Text="Todos" CssClass="btn btn-info" Height="36px" Width="82px"/>
-
-      <asp:Button ID="Button9" runat="server" Text="Nuevo"  CssClass="btn btn-success" />
+       <a href="#" class="btn btn-sm btn-info" id="Buscar" runat="server"><span class="glyphicon glyphicon-zoom-in"></span> Buscar</a>
+                    <a href="#" class="btn btn-sm btn-info" id="todos" runat="server"><span class="glyphicon glyphicon-th-list"></span> Mostrar</a>
+       <a href="#" class="btn btn-sm btn-success" id="Nuevo" runat="server"><span class="glyphicon glyphicon-plus"></span> </a>
   </div>
     <ul class="list-group height:1px">
     <li class="list-group-item">
+         <div class="table-responsive">
         <!--aca va el gridview-->
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="codigo_salon" ForeColor="#333333" GridLines="None" OnRowcommand="GridView1_RowCommand">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="codigo_salon" ForeColor="#333333" GridLines="None" OnRowcommand="GridView1_RowCommand" Cssclass="table table-hover">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:BoundField DataField="codigo_salon" HeaderText="Codigo De Salon" ReadOnly="True" SortExpression="codigo_salon" />
                 <asp:BoundField DataField="nombre" HeaderText="Nombre" SortExpression="nombre" />
                 <asp:BoundField DataField="estado" HeaderText="Estado" SortExpression="estado" />
+                <asp:BoundField DataField="costo" HeaderText="Costo" SortExpression="costo" />
                   <asp:TemplateField HeaderText="Modificar">
                                      <ItemTemplate>
                                          <asp:Button ID="modifBtn" runat="server" commandArgument="<%#Container.DataItemIndex %>" CommandName="actualizar" CssClass="btn btn-primary btn-sm" Text="editar" />
@@ -50,6 +51,11 @@
             <SortedDescendingCellStyle BackColor="#FFFDF8" />
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
+                <div style="margin-left: 400px; width: 197px;">
+                         <a href="#" class="btn btn-sm btn-info" id="anterior" runat="server" ><span class="glyphicon glyphicon-step-backward"></span>Anterior</a>
+                         <a href="#" class="btn btn-sm btn-info" id="siguiente" runat="server"><span class="glyphicon glyphicon-step-forward"></span> Siguiente</a>
+              </div>
+             </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BD_orquideasConnectionString %>" SelectCommand="SELECT DISTINCT * FROM [tb_salon]"></asp:SqlDataSource>
         </li>
         </ul>
@@ -57,12 +63,10 @@
                 </ContentTemplate>
     </asp:UpdatePanel>  
             <!--nuevo salon-->
-
             <asp:Button ID="Button1" runat="server" Text="Button" Style="display:none" />
             <ajaxToolkit:ModalPopupExtender ID="Button1_ModalPopupExtender" runat="server" BehaviorID="Button1_ModalPopupExtender" DynamicServicePath="" TargetControlID="Button1" BackgroundCssClass="modalbakground" PopupControlID="panel1">
             </ajaxToolkit:ModalPopupExtender>
              <asp:Panel ID="Panel1" runat="server" style="display:none; background: white; Width:50%; height:auto">
-          
                      <div class="modal-header">
                           <h3 id="mymodallabel" >Nuevo Salon</h3>
                        </div>
@@ -72,21 +76,30 @@
                                 <div class="form-group">
                                     <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
-                                   <asp:TextBox ID="codigo" runat="server"></asp:TextBox>
+                                   <asp:TextBox ID="codigo" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>   
                                    <div class="form-group">
                                     <label  class="col-sm-4 control-label">Nombre:</label>
                                     <div class="col-sm-8">
-                                            <asp:TextBox ID="nombre" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="nombre" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
-                                      <div class="form-group">
-                                    <label  class="col-sm-4 control-label">estado:</label>
+                                     <div class="form-group">
+                                    <label  class="col-sm-4 control-label">Estado:</label>
+                                    <div class="col-sm-4">
+                                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="estilo1" >
+                                <asp:ListItem>Disponible</asp:ListItem>
+                                <asp:ListItem>Reservado</asp:ListItem>
+                            </asp:DropDownList>
+                                    </div>
+                                 </div>
+                                <div class="form-group">
+                                    <label  class="col-sm-4 control-label">Costo:</label>
                                     <div class="col-sm-8">
-                                            <asp:TextBox ID="estado" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="costo" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
-                                 </div> 
+                                 </div>  
                             </div> 
                        </div>     
                        <div class="modal-footer">
@@ -95,8 +108,8 @@
                        </div>
          
         </asp:Panel>
- <!--Actualizacion de Salon-->
-    <asp:Button ID="Button2" runat="server" Text="Button" />
+ <!--Actualizacion de Salon--> 
+    <asp:Button ID="Button2" runat="server" Text="Button" Style="display:none"  />
     <ajaxToolkit:ModalPopupExtender ID="Button2_ModalPopupExtender" runat="server" BehaviorID="Button2_ModalPopupExtender"  TargetControlID="Button2" BackgroundCssClass="modalbakground" PopupControlID="panel2">
     </ajaxToolkit:ModalPopupExtender>
      <asp:Panel ID="Panel2" runat="server"  style="display:none; background: white; Width:50%; height:auto">
@@ -111,21 +124,30 @@
                                 <div class="form-group">
                                     <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
-                                      <asp:TextBox ID="codigo_m" runat="server"></asp:TextBox>
+                                      <asp:TextBox ID="codigo_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>   
                                    <div class="form-group">
                                     <label  class="col-sm-4 control-label">Nombre:</label>
                                     <div class="col-sm-8">
-                                           <asp:TextBox ID="nombre_m" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="nombre_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                       <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Estado:</label>
+                                    <label  class="col-sm-4 control-label">Costo:</label>
                                     <div class="col-sm-8">
-                                         <asp:TextBox ID="estado_m" runat="server"></asp:TextBox>
+                                         <asp:TextBox ID="costo_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
+                            <div class="form-group">
+                                    <label  class="col-sm-4 control-label">Estado:</label>
+                                    <div class="col-sm-4">
+                                        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="estilo1" >
+                                <asp:ListItem>Disponible</asp:ListItem>
+                                <asp:ListItem>Reservado</asp:ListItem>
+                            </asp:DropDownList>
+                                    </div>
+                                 </div>
                             </div>
                             </div> 
                        <div class="modal-footer">
@@ -136,7 +158,7 @@
           </asp:UpdatePanel>
     </asp:Panel>
   <!--Eliminacion de salon-->
-    <asp:Button ID="Button10" runat="server" Text="Button" />
+    <asp:Button ID="Button10" runat="server" Text="Button" Style="display:none" />
     <ajaxToolkit:ModalPopupExtender ID="Button10_ModalPopupExtender" runat="server" BehaviorID="Button10_ModalPopupExtender"  TargetControlID="Button10" BackgroundCssClass="modalbakground" PopupControlID="panel3">
     </ajaxToolkit:ModalPopupExtender>
     <asp:Panel ID="Panel3" runat="server" style="display:none; background: white; Width:50%; height:auto">
@@ -151,19 +173,25 @@
                                 <div class="form-group">
                                     <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
-                                      <asp:TextBox ID="codigo_e" runat="server"></asp:TextBox>
+                                      <asp:TextBox ID="codigo_e" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>   
                                    <div class="form-group">
                                     <label  class="col-sm-4 control-label">Nombre:</label>
                                     <div class="col-sm-8">
-                                         <asp:TextBox ID="nombre_e" runat="server"></asp:TextBox>
+                                         <asp:TextBox ID="nombre_e" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                       <div class="form-group">
                                     <label  class="col-sm-4 control-label">Estado:</label>
                                     <div class="col-sm-8">
-                                             <asp:TextBox ID="estado_e" runat="server"></asp:TextBox>
+                                             <asp:TextBox ID="estado_e" runat="server" CssClass="estilo1"></asp:TextBox>
+                                    </div>
+                                 </div> 
+                                <div class="form-group">
+                                    <label  class="col-sm-4 control-label">Costo:</label>
+                                    <div class="col-sm-8">
+                                            <asp:TextBox ID="costo_e" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                             </div>
@@ -176,9 +204,7 @@
          </asp:UpdatePanel>
            
     </asp:Panel>
-
     
-
  
-
 </asp:Content>
+

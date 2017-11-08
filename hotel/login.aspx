@@ -12,7 +12,6 @@
     </style>
 </head>
 <body>
-     
     <div id="particles-js">
   <div class="container">
   <div class="form-container flip">
@@ -20,7 +19,7 @@
     <form class="login-form" runat="server">
       <h3 class="title">Bienvenido.</h3>
       <div class="form-group" id="username">
-        <input class="form-input" tooltip-class="username-tooltip" placeholder="usuario" required="required" runat="server" id="usuario1"/>
+        <input class="form-input" tooltip-class="username-tooltip" placeholder="usuario" required="required" runat="server" id="usuario1" autofocus="" value=""/>
         <span id="username-tool"class="tooltip username-tooltip">Ingrese su Usuario</span>
       </div>
       <div class="form-group" id="password">

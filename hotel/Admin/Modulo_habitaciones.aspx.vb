@@ -3,17 +3,16 @@
     Inherits System.Web.UI.Page
     Dim nueva_habitacion As New Bd_orquideasDataContext
     Dim habitacion As New tb_habitacion
+    Dim cantidad_registros As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             'llena el gridview con los Registros de los clientes
             Session("minimo") = 0
             mostrar_habitaciones(CInt(Session("minimo")), 10)
         End If
+        DropDownList1.Items.Add("ocupado")
     End Sub
-    'abrir modal nueva habitacion
-    Protected Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Button1_ModalPopupExtender.Show()
-    End Sub
+
     'cerrar modal para nueva habitacion
     Protected Sub butto4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Button1_ModalPopupExtender.Hide()
@@ -25,7 +24,7 @@
             .metros = metros.Text
             .cantidad_camas = Cantidad_camas.Text
             .costo = Costo.Text
-            .estado = Estado.Text
+            .estado = DropDownList1.SelectedItem.Value
             .tipo_habitacion = Tipo_habitacion.Text
         End With
         nueva_habitacion.tb_habitacion.InsertOnSubmit(habitacion)
@@ -34,7 +33,6 @@
         metros.Text = ""
         Cantidad_camas.Text = ""
         Costo.Text = ""
-        Estado.Text = ""
         Tipo_habitacion.Text = ""
         Button1_ModalPopupExtender.Hide()
         mostrar_habitaciones(CInt(Session("minimo")), 10)
@@ -127,4 +125,46 @@
         Catch ex As Exception
         End Try
     End Sub
+
+    Protected Sub siguiente_click(sender As Object, e As EventArgs) Handles siguiente.ServerClick
+        'cargar nmuevamenteo los datos auque no es recomentable mejor ahcerlo por partes
+        'GridView1.PageIndex = GridView1.PageIndex + 1
+
+        If CInt(Session("minimo")) <= cantidad_registros Then
+            Session("minimo") = CInt(Session("minimo")) + 10
+            mostrar_habitaciones(CInt(Session("minimo")), 10)
+        Else
+
+        End If
+
+    End Sub
+    Protected Sub anterior_click(sender As Object, e As EventArgs) Handles anterior.ServerClick
+        If CInt(Session("minimo")) = 0 Then
+
+        Else
+            Session("minimo") = CInt(Session("minimo")) - 10
+            mostrar_habitaciones(CInt(Session("minimo")), 10)
+
+        End If
+    End Sub
+    Protected Sub todos_Click(sender As Object, e As EventArgs) Handles todos.ServerClick
+        mostrar_habitaciones(0, 10)
+    End Sub
+    Protected Sub buscar_Click(sender As Object, e As EventArgs) Handles Buscar.ServerClick
+        If Len(Trim(TextBox1.Text)) = 0 Then
+            MsgBox("el Campo Esta Vacio")
+        Else
+            Dim datos = (From tabla In nueva_habitacion.tb_habitacion
+                         Where tabla.codigo_habitacion = TextBox1.Text
+                         Select tabla)
+            GridView1.DataSource = datos
+            GridView1.DataBind()
+            TextBox1.Text = ""
+        End If
+    End Sub
+    Protected Sub nuevo_Click(sender As Object, e As EventArgs) Handles Nuevo.ServerClick
+        Button1_ModalPopupExtender.Show()
+    End Sub
+
+
 End Class

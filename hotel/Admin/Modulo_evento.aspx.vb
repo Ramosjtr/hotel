@@ -2,6 +2,7 @@
     Inherits System.Web.UI.Page
     Dim nuevo_evento As New Bd_orquideasDataContext
     Dim evento As New tb_evento
+    Dim cantidad_registros As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             'llena el gridview con los Registros de los clientes
@@ -10,9 +11,6 @@
         End If
     End Sub
     'abrir modal nuevo evento
-    Protected Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Button10_ModalPopupExtender.Show()
-    End Sub
     'cerrar modal nuevo evento
     Protected Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Button10_ModalPopupExtender.Hide()
@@ -22,6 +20,7 @@
         With evento
             .codigo_evento = codigo.Text
             .nombre = nombre.Text
+            .costo = costo.Text
         End With
         nuevo_evento.tb_evento.InsertOnSubmit(evento)
         nuevo_evento.SubmitChanges()
@@ -71,6 +70,7 @@
             For Each evento In datos
                 codigo_m.Text = evento.codigo_evento
                 nombre_m.Text = evento.nombre
+                costo_m.Text = evento.costo
             Next
             Button1_ModalPopupExtender.Show()
         End If
@@ -84,6 +84,7 @@
             For Each evento In datos
                 codigo_e.Text = evento.codigo_evento
                 nombre_e.Text = evento.nombre
+                costo_e.Text = evento.costo
             Next
             Button2_ModalPopupExtender.Show()
         End If
@@ -109,4 +110,49 @@
         Catch ex As Exception
         End Try
     End Sub
+
+
+    Protected Sub siguiente_click(sender As Object, e As EventArgs) Handles siguiente.ServerClick
+        'cargar nmuevamenteo los datos auque no es recomentable mejor ahcerlo por partes
+        'GridView1.PageIndex = GridView1.PageIndex + 1
+
+        If CInt(Session("minimo")) <= cantidad_registros Then
+            Session("minimo") = CInt(Session("minimo")) + 10
+            mostrar_evento(CInt(Session("minimo")), 10)
+        Else
+
+        End If
+
+    End Sub
+    Protected Sub anterior_click(sender As Object, e As EventArgs) Handles anterior.ServerClick
+        If CInt(Session("minimo")) = 0 Then
+
+        Else
+            Session("minimo") = CInt(Session("minimo")) - 10
+            mostrar_evento(CInt(Session("minimo")), 10)
+
+        End If
+    End Sub
+    Protected Sub todos_Click(sender As Object, e As EventArgs) Handles todos.ServerClick
+        mostrar_evento(0, 10)
+    End Sub
+    Protected Sub buscar_Click(sender As Object, e As EventArgs) Handles Buscar.ServerClick
+        If Len(Trim(TextBox1.Text)) = 0 Then
+            MsgBox("el Campo Esta Vacio")
+        Else
+            Dim datos = (From tabla In nuevo_evento.tb_evento
+                         Where tabla.nombre = TextBox1.Text
+                         Select tabla)
+            GridView1.DataSource = datos
+            GridView1.DataBind()
+            TextBox1.Text = ""
+        End If
+    End Sub
+    Protected Sub nuevo_Click(sender As Object, e As EventArgs) Handles Nuevo.ServerClick
+        Button10_ModalPopupExtender.Show()
+    End Sub
+
+
+
+
 End Class

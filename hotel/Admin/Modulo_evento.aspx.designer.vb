@@ -50,31 +50,31 @@ Partial Public Class Modulo_evento
     Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control Button3.
+    '''Control Buscar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button3 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Buscar As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
-    '''Control Button8.
+    '''Control todos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button8 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents todos As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
-    '''Control Button9.
+    '''Control Nuevo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button9 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Nuevo As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''Control GridView1.
@@ -84,6 +84,24 @@ Partial Public Class Modulo_evento
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control anterior.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents anterior As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''Control siguiente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents siguiente As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''Control SqlDataSource1.
@@ -138,6 +156,15 @@ Partial Public Class Modulo_evento
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents nombre As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control costo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents costo As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Button4.
@@ -212,6 +239,15 @@ Partial Public Class Modulo_evento
     Protected WithEvents nombre_m As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''Control costo_m.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents costo_m As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Control Button6.
     '''</summary>
     '''<remarks>
@@ -282,6 +318,15 @@ Partial Public Class Modulo_evento
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents nombre_e As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control costo_e.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents costo_e As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Button11.

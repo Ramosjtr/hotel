@@ -2,16 +2,13 @@
     Inherits System.Web.UI.Page
     Dim nuevo_paquete As New Bd_orquideasDataContext
     Dim paquete As New tb_paquete
+    Dim cantidad_registros As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             'llena el gridview con los Registros de los clientes
             Session("minimo") = 0
             mostrar_paquetes(CInt(Session("minimo")), 10)
         End If
-    End Sub
-    'abrir modal de nuevo paquete
-    Protected Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Button1_ModalPopupExtender.Show()
     End Sub
     'cerrar modal de nuevo paquete
     Protected Sub button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -114,5 +111,46 @@
         Catch ex As Exception
         End Try
     End Sub
+
+    Protected Sub siguiente_click(sender As Object, e As EventArgs) Handles siguiente.ServerClick
+        'cargar nmuevamenteo los datos auque no es recomentable mejor ahcerlo por partes
+        'GridView1.PageIndex = GridView1.PageIndex + 1
+
+        If CInt(Session("minimo")) <= cantidad_registros Then
+            Session("minimo") = CInt(Session("minimo")) + 10
+            mostrar_paquetes(CInt(Session("minimo")), 10)
+        Else
+
+        End If
+
+    End Sub
+    Protected Sub anterior_click(sender As Object, e As EventArgs) Handles anterior.ServerClick
+        If CInt(Session("minimo")) = 0 Then
+
+        Else
+            Session("minimo") = CInt(Session("minimo")) - 10
+            mostrar_paquetes(CInt(Session("minimo")), 10)
+
+        End If
+    End Sub
+    Protected Sub todos_Click(sender As Object, e As EventArgs) Handles todos.ServerClick
+        mostrar_paquetes(0, 10)
+    End Sub
+    Protected Sub buscar_Click(sender As Object, e As EventArgs) Handles Buscar.ServerClick
+        If Len(Trim(TextBox1.Text)) = 0 Then
+            MsgBox("el Campo Esta Vacio")
+        Else
+            Dim datos = (From tabla In nuevo_paquete.tb_paquete
+                         Where tabla.nombre = TextBox1.Text
+                         Select tabla)
+            GridView1.DataSource = datos
+            GridView1.DataBind()
+            TextBox1.Text = ""
+        End If
+    End Sub
+    Protected Sub nuevo_Click(sender As Object, e As EventArgs) Handles Nuevo.ServerClick
+        Button1_ModalPopupExtender.Show()
+    End Sub
+
 
 End Class

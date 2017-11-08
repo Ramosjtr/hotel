@@ -50,31 +50,31 @@ Partial Public Class Modulo_paquetes
     Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control Button3.
+    '''Control Buscar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button3 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Buscar As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
-    '''Control Button8.
+    '''Control todos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button8 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents todos As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
-    '''Control Button9.
+    '''Control Nuevo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button9 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Nuevo As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''Control GridView1.
@@ -84,6 +84,24 @@ Partial Public Class Modulo_paquetes
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control anterior.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents anterior As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''Control siguiente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents siguiente As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''Control SqlDataSource1.

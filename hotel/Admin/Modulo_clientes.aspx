@@ -12,15 +12,15 @@
   <div class="panel-body">
  <asp:Label ID="Label2" runat="server" Text="buscar: "></asp:Label>
                     <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
-                    <asp:Button ID="Button3" runat="server" Text="B" CssClass="btn btn-info btn-sm" />
-                    <asp:Button ID="Button8" runat="server" Text="Todos" CssClass="btn btn-info" Height="36px" Width="82px"/>
-
-      <asp:Button ID="Button9" runat="server" Text="Nuevo"  CssClass="btn btn-success" />
+                    <a href="#" class="btn btn-sm btn-info" id="Buscar" runat="server"><span class="glyphicon glyphicon-zoom-in"></span> Buscar</a>
+                    <a href="#" class="btn btn-sm btn-info" id="todos" runat="server"><span class="glyphicon glyphicon-th-list"></span> Mostrar</a>
+       <a href="#" class="btn btn-sm btn-success" id="Nuevo" runat="server"><span class="glyphicon glyphicon-plus"></span> </a>
   </div>
     <ul class="list-group height:1px">
     <li class="list-group-item">
+          <div class="table-responsive">
         <!--aca va el Gridview-->
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="codigo_cliente"  CellPadding="4" ForeColor="#333333" GridLines="None"  OnRowCommand="GridView1_RowCommand">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="codigo_cliente"  CellPadding="4" ForeColor="#333333" GridLines="None"  OnRowCommand="GridView1_RowCommand" Cssclass="table table-hover">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:BoundField DataField="codigo_cliente" HeaderText="Codigo De Cliente" ReadOnly="True" SortExpression="codigo_cliente"  />
@@ -52,6 +52,11 @@
             <SortedDescendingCellStyle BackColor="#FFFDF8" />
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
+                  <div style="margin-left: 400px; width: 197px;">
+                         <a href="#" class="btn btn-sm btn-info" id="anterior" runat="server" ><span class="glyphicon glyphicon-step-backward"></span>Anterior</a>
+                         <a href="#" class="btn btn-sm btn-info" id="siguiente" runat="server"><span class="glyphicon glyphicon-step-forward"></span> Siguiente</a>
+              </div>
+              </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BD_orquideasConnectionString %>" SelectCommand="SELECT DISTINCT * FROM [tb_cliente]"></asp:SqlDataSource>
      </li>
     </div>
@@ -72,43 +77,43 @@
                                  <div class="form-group">
                                     <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
-                                   <asp:TextBox ID="codigo" runat="server"></asp:TextBox>
+                                   <asp:TextBox ID="codigo" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>   
                                 <div class="form-group">
                                     <label  class="col-sm-4 control-label">Nombre:</label>
                                     <div class="col-sm-8">
-                                   <asp:TextBox ID="nombre" runat="server"></asp:TextBox>
+                                   <asp:TextBox ID="nombre" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>   
                                    <div class="form-group">
                                     <label  class="col-sm-4 control-label">Apellido:</label>
                                     <div class="col-sm-8">
-                                            <asp:TextBox ID="apellido" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="apellido" runat="server" Cssclass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                       <div class="form-group">
                                     <label  class="col-sm-4 control-label">Direccion:</label>
                                     <div class="col-sm-8">
-                                           <asp:TextBox ID="direccion" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="direccion" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                  <div class="form-group">
                                     <label  class="col-sm-4 control-label">Telefono:</label>
                                     <div class="col-sm-8">
-                                           <asp:TextBox ID="telefono" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="telefono" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>
                                  <div class="form-group">
                                     <label  class="col-sm-4 control-label">Correo:</label>
                                     <div class="col-sm-8">
-                                           <asp:TextBox ID="correo" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="correo" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>
                                   <div class="form-group">
                                     <label  class="col-sm-4 control-label">Numero Tarjeta:</label>
                                     <div class="col-sm-8">
-                                           <asp:TextBox ID="tarjeta" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="tarjeta" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>
                             </div> 
@@ -134,43 +139,43 @@
                                 <div class="form-group">
                                     <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
-                                      <asp:TextBox ID="codigo_m" runat="server"></asp:TextBox>
+                                      <asp:TextBox ID="codigo_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>   
                                    <div class="form-group">
                                     <label  class="col-sm-4 control-label">Nombre:</label>
                                     <div class="col-sm-8">
-                                           <asp:TextBox ID="nombre_m" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="nombre_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                       <div class="form-group">
                                     <label  class="col-sm-4 control-label">Apellido:</label>
                                     <div class="col-sm-8">
-                                         <asp:TextBox ID="apellido_m" runat="server"></asp:TextBox>
+                                         <asp:TextBox ID="apellido_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                   <div class="form-group">
                                     <label  class="col-sm-4 control-label">Direccion:</label>
                                     <div class="col-sm-8">
-                                         <asp:TextBox ID="direccion_m" runat="server"></asp:TextBox>
+                                         <asp:TextBox ID="direccion_m" runat="server" Cssclass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                   <div class="form-group">
                                     <label  class="col-sm-4 control-label">Telefono:</label>
                                     <div class="col-sm-8">
-                                         <asp:TextBox ID="telefono_m" runat="server"></asp:TextBox>
+                                         <asp:TextBox ID="telefono_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                  <div class="form-group">
                                     <label  class="col-sm-4 control-label">Correo:</label>
                                     <div class="col-sm-8">
-                                         <asp:TextBox ID="correo_m" runat="server"></asp:TextBox>
+                                         <asp:TextBox ID="correo_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                  <div class="form-group">
                                     <label  class="col-sm-4 control-label">No.Tarjeta:</label>
                                     <div class="col-sm-8">
-                                         <asp:TextBox ID="Tarjeta_m" runat="server"></asp:TextBox>
+                                         <asp:TextBox ID="Tarjeta_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                
@@ -199,19 +204,19 @@
                                 <div class="form-group">
                                     <label  class="col-sm-4 control-label">Nombre:</label>
                                     <div class="col-sm-8">
-                                      <asp:TextBox ID="nombre_e" runat="server"></asp:TextBox>
+                                      <asp:TextBox ID="nombre_e" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div>   
                                    <div class="form-group">
                                     <label  class="col-sm-4 control-label">Apellido:</label>
                                     <div class="col-sm-8">
-                                         <asp:TextBox ID="apellido_e" runat="server"></asp:TextBox>
+                                         <asp:TextBox ID="apellido_e" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                                       <div class="form-group">
                                     <label  class="col-sm-4 control-label">Telefono:</label>
                                     <div class="col-sm-8">
-                                             <asp:TextBox ID="telefono_e" runat="server"></asp:TextBox>
+                                             <asp:TextBox ID="telefono_e" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
                             </div>
@@ -225,4 +230,3 @@
            
     </asp:Panel>
     </asp:Content>
-

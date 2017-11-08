@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin/admin.Master" CodeBehind="Modulo_reservaciones.aspx.vb" Inherits="hotel.Modulo_reservaciones" %>
-
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -15,70 +13,49 @@
   <div class="panel-body">
  <asp:Label ID="Label2" runat="server" Text="buscar: "></asp:Label>
                     <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
-                    <asp:Button ID="Button3" runat="server" Text="B" CssClass="btn btn-info btn-sm" />
-                    <asp:Button ID="Button8" runat="server" Text="Todos" CssClass="btn btn-info" Height="36px" Width="82px"/>
-
-      <asp:Button ID="Button9" runat="server" Text="Nuevo"   CssClass="btn btn-success" />
+      <a href="#" class="btn btn-sm btn-info" id="Buscar" runat="server"><span class="glyphicon glyphicon-zoom-in"></span> Buscar</a>
+                    <a href="#" class="btn btn-sm btn-info" id="todos" runat="server"><span class="glyphicon glyphicon-th-list"></span> Mostrar</a>
   </div>
     <ul class="list-group height:1px">
     <li class="list-group-item">
+          <div class="table-responsive">
         <!--aca va Gridview-->
-
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4"  ForeColor="#333333" GridLines="None" Cssclass="table table-hover">
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <Columns>
+                <asp:BoundField DataField="codigo_reservacion" HeaderText="Codigo" SortExpression="codigo_reservacion" />
+                <asp:BoundField DataField="codigo_habitacion" HeaderText="Codigo Habitacion" SortExpression="codigo_habitacion" />
+                <asp:BoundField DataField="fecha_inicio" HeaderText="Inicio" SortExpression="fecha_inicio" />
+                <asp:BoundField DataField="fecha_finalizacion" HeaderText="Finalizacion" SortExpression="fecha_finalizacion" />
+                <asp:BoundField DataField="codigo_paquete" HeaderText="Codigo Paquete" SortExpression="codigo_paquete" />
+                <asp:BoundField DataField="numero_documento" HeaderText="Numero Documento" SortExpression="numero_documento" />
+                <asp:BoundField DataField="total" HeaderText="Total" SortExpression="total" />
+                <asp:BoundField DataField="nombre" HeaderText="Nombre" SortExpression="nombre" />
+                <asp:BoundField DataField="apellido" HeaderText="Apellido" SortExpression="apellido" />
+                <asp:BoundField DataField="tb_tarjeta" HeaderText="N Tarjeta" SortExpression="tb_tarjeta" />
+            </Columns>
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+        </asp:GridView>
+              <div style="margin-left: 400px; width: 197px;">
+                         <a href="#" class="btn btn-sm btn-info" id="anterior" runat="server" ><span class="glyphicon glyphicon-step-backward"></span>Anterior</a>
+                         <a href="#" class="btn btn-sm btn-info" id="siguiente" runat="server"><span class="glyphicon glyphicon-step-forward"></span> Siguiente</a>
+              </div>
+              </div>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BD_orquideasConnectionString %>" SelectCommand="SELECT DISTINCT * FROM [vista_reservacion]"></asp:SqlDataSource>
         </li>
         </ul>
+
     </div>
         </ContentTemplate>
     </asp:UpdatePanel>
-<!--nueva Reservacion-->
-    <asp:Button ID="Button1" runat="server" Text="Button" style="display:none"/>
-    <ajaxToolkit:ModalPopupExtender ID="Button1_ModalPopupExtender" runat="server" BehaviorID="Button1_ModalPopupExtender" DynamicServicePath="" TargetControlID="Button1" BackgroundCssClass="modalbakground" PopupControlID="panel1">
-    </ajaxToolkit:ModalPopupExtender>
-     <asp:Panel ID="Panel1" runat="server" style="display:none; background: white; Width:50%; height:auto">
-            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                <ContentTemplate>
-                     <div class="modal-header">
-                          <h3 id="mymodallabel" >Nueva Reservacion</h3>
-                       </div>
-                       <div class="modal-body">
-                         <%--cuerpo del modal--%>
-                            <div class="form-horizontal">
-                                <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Nombre:</label>
-                                    <div class="col-sm-8">
-                                   <asp:TextBox ID="nombre" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div>   
-                                   <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Apellido:</label>
-                                    <div class="col-sm-8">
-                                            <asp:TextBox ID="apellido" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div> 
-                                      <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Nit:</label>
-                                    <div class="col-sm-8">
-                                           <asp:TextBox ID="nit" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div> 
-                                 <div class="form-group">
-                                    <label  class="col-sm-4 control-label">Tipo De Cliente :</label>
-                                    <div class="col-sm-8">
-                                           <asp:TextBox ID="tipo" runat="server"></asp:TextBox>
-                                    </div>
-                                 </div>
-                            </div> 
-                       </div>     
-                       <div class="modal-footer">
-                            <asp:Button ID="Button4" runat="server" Text="close" class="btn" data-dismiss="modal" aria-hidden="true" />
-                            <asp:Button ID="Button5" runat="server" Text="Guardar" CssClass="btn btn-success" />
-                       </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>
-        </asp:Panel>
-    
-
- 
-
-
 
 </asp:Content>
