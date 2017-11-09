@@ -23,6 +23,10 @@
                 opacity: 0.8;
                 z-index:10000;
             }
+             .jumbotron {
+                 background-color:white;
+             
+             }
            
           </style>
         <!--textbox-->
@@ -37,6 +41,10 @@
     width: 230px;
 
             }
+             .imagen {
+             height:480px;
+             width:1100px;
+             }
            
           </style>  
 </head>
@@ -122,69 +130,69 @@
             </span>
           </a>
           <ul class="treeview-menu">
-             <li><a href="Modulo_clientes.aspx"><i class="glyphicon glyphicon-eye-open"></i> Gestionar </a></li>
+             <li><a href="Modulo_clientes.aspx"><i class="glyphicon glyphicon-tasks"></i> Gestionar </a></li>
         
           </ul>
         </li>
            <li class="treeview">
-          <a href="#"><i class="glyphicon glyphicon-user"></i> <span>habitaciones</span>
+          <a href="#"><i class="glyphicon glyphicon-home"></i> <span>habitaciones</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="Modulo_habitaciones.aspx" class="glyphicon glyphicon-eye-open"> Gestionar </a></li>
+            <li><a href="Modulo_habitaciones.aspx" class="glyphicon glyphicon-tasks"> Gestionar </a></li>
               <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-usd"></i> Tipo De Habitacion
+              <a href="#"><i class="glyphicon glyphicon-tasks"></i> Tipo De Habitacion
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                 <li><a href="Modulo_Tipo_habitacion.aspx"><i class="glyphicon glyphicon-eye-open"></i> Gestionar</a></li>
+                 <li><a href="Modulo_Tipo_habitacion.aspx"><i class="glyphicon glyphicon-tasks"></i> Gestionar</a></li>
                 </ul>
             </li>
           </ul>
         </li>  
             <li class="treeview">
-          <a href="#"><i class="glyphicon glyphicon-user"></i> <span>Reservaciones</span>
+          <a href="#"><i class="glyphicon glyphicon-credit-card"></i> <span>Reservaciones</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="Modulo_reservaciones.aspx" class="glyphicon glyphicon-eye-open"> Gestionar </a></li>
+            <li><a href="Modulo_reservaciones.aspx" class="glyphicon glyphicon-tasks"> Gestionar </a></li>
           </ul>
         </li> 
              
            <li class="treeview">
-          <a href="#"><i class="glyphicon glyphicon-user"></i> <span>evento</span>
+          <a href="#"><i class="glyphicon glyphicon-cutlery"></i> <span>evento</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="Modulo_evento.aspx" class="glyphicon glyphicon-eye-open"> Gestionar </a></li>
+            <li><a href="Modulo_evento.aspx" class="glyphicon glyphicon-tasks"> Gestionar </a></li>
               <li class="treeview">
-              <a href="#"><i class="glyphicon glyphicon-usd"></i> Salon
+              <a href="#"><i class="glyphicon glyphicon-tag"></i> Salon
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                 <li><a href="Modulo_salon.aspx"><i class="glyphicon glyphicon-eye-open"></i> Gestionar</a></li>
+                 <li><a href="Modulo_salon.aspx"><i class="glyphicon glyphicon-tasks"></i> Gestionar</a></li>
                 </ul>
             </li>
           </ul>
         </li>
                 <li class="treeview">
-          <a href="#"><i class="glyphicon glyphicon-user"></i> <span>paquetes</span>
+          <a href="#"><i class="glyphicon glyphicon-gift"></i> <span>paquetes</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="Modulo_paquetes.aspx" class="glyphicon glyphicon-eye-open"> Gestionar </a></li>
+            <li><a href="Modulo_paquetes.aspx" class="glyphicon glyphicon-tasks"> Gestionar </a></li>
           </ul>
         </li>
            <li class="treeview">
@@ -194,7 +202,7 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="Modulo_usuarios.aspx" class="glyphicon glyphicon-eye-open"> Gestionar </a></li>
+            <li><a href="Modulo_usuarios.aspx" class="glyphicon glyphicon-tasks"> Gestionar </a></li>
           </ul>
         </li>
             

@@ -76,7 +76,7 @@
                                 <div class="form-group">
                                     <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
-                                   <asp:TextBox ID="codigo" runat="server" CssClass="estilo1"></asp:TextBox>
+                                   <asp:TextBox ID="codigo" runat="server" CssClass="estilo1" Value="SA-"></asp:TextBox>
                                     </div>
                                  </div>   
                                    <div class="form-group">

@@ -79,7 +79,7 @@
                                 <div class="form-group">
                                     <label  class="col-sm-4 control-label">Codigo:</label>
                                     <div class="col-sm-8">
-                                   <asp:TextBox ID="codigo" runat="server" CssClass="estilo1"></asp:TextBox>
+                                   <asp:TextBox ID="codigo" runat="server" CssClass="estilo1" value="HB-"></asp:TextBox>
                                     </div>
                                  </div>   
                                    <div class="form-group">
@@ -111,10 +111,17 @@
                             </asp:DropDownList>
                                     </div>
                                  </div>
-                                 <div class="form-group">
+                                  <div class="form-group">
                                     <label  class="col-sm-4 control-label">Tipo De Habitacion:</label>
-                                    <div class="col-sm-8">
-                                           <asp:TextBox ID="Tipo_habitacion" runat="server" CssClass="estilo1"></asp:TextBox>
+                                    <div class="col-sm-4">
+                                        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="estilo1" >
+                             <asp:ListItem>Junior</asp:ListItem>
+                                <asp:ListItem>Master</asp:ListItem>
+                                 <asp:ListItem>Plus Matrimonial</asp:ListItem>
+                                <asp:ListItem>Suite Junior</asp:ListItem>
+                                <asp:ListItem>Suite Master</asp:ListItem>
+                           
+                            </asp:DropDownList>
                                     </div>
                                  </div>
                             </div> 
@@ -161,18 +168,28 @@
                                          <asp:TextBox ID="costo_m" runat="server" CssClass="estilo1"></asp:TextBox>
                                     </div>
                                  </div> 
-                                  <div class="form-group">
+                                   <div class="form-group">
                                     <label  class="col-sm-4 control-label">Estado:</label>
-                                    <div class="col-sm-8">
-                                         <asp:TextBox ID="estado_m" runat="server" CssClass="estilo1"></asp:TextBox>
+                                    <div class="col-sm-4">
+                                        <asp:DropDownList ID="DropDownList4_m" runat="server" CssClass="estilo1" >
+                                <asp:ListItem>Disponible</asp:ListItem>
+                                <asp:ListItem>Reservado</asp:ListItem>
+                            </asp:DropDownList>
                                     </div>
-                                 </div> 
-                                 <div class="form-group">
+                                 </div>
+                                  <div class="form-group">
                                     <label  class="col-sm-4 control-label">Tipo De Habitacion:</label>
-                                    <div class="col-sm-8">
-                                         <asp:TextBox ID="tipo_m" runat="server" CssClass="estilo1"></asp:TextBox>
+                                    <div class="col-sm-4">
+                                        <asp:DropDownList ID="DropDownList3_m" runat="server" CssClass="estilo1" >
+                             <asp:ListItem>Junior</asp:ListItem>
+                                <asp:ListItem>Master</asp:ListItem>
+                                 <asp:ListItem>Plus Matrimonial</asp:ListItem>
+                                <asp:ListItem>Suite Junior</asp:ListItem>
+                                <asp:ListItem>Suite Master</asp:ListItem>
+                           
+                            </asp:DropDownList>
                                     </div>
-                                 </div>                               
+                                 </div>                           
                             </div>
                             </div> 
                        <div class="modal-footer">

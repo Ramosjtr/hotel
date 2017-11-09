@@ -185,13 +185,13 @@ Partial Public Class Modulo_habitaciones
     Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''Control Tipo_habitacion.
+    '''Control DropDownList2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Tipo_habitacion As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents DropDownList2 As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
     '''Control Button4.
@@ -284,22 +284,22 @@ Partial Public Class Modulo_habitaciones
     Protected WithEvents costo_m As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control estado_m.
+    '''Control DropDownList4_m.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents estado_m As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents DropDownList4_m As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''Control tipo_m.
+    '''Control DropDownList3_m.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents tipo_m As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents DropDownList3_m As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
     '''Control Button6.

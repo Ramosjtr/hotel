@@ -25,7 +25,7 @@
             .cantidad_camas = Cantidad_camas.Text
             .costo = Costo.Text
             .estado = DropDownList1.SelectedItem.Value
-            .tipo_habitacion = Tipo_habitacion.Text
+            .tipo_habitacion = "TP_matrimonial"
         End With
         nueva_habitacion.tb_habitacion.InsertOnSubmit(habitacion)
         nueva_habitacion.SubmitChanges()
@@ -33,7 +33,6 @@
         metros.Text = ""
         Cantidad_camas.Text = ""
         Costo.Text = ""
-        Tipo_habitacion.Text = ""
         Button1_ModalPopupExtender.Hide()
         mostrar_habitaciones(CInt(Session("minimo")), 10)
     End Sub
@@ -58,8 +57,6 @@
                 metros_m.Text = habitacion.metros
                 cantidad_m.Text = habitacion.cantidad_camas
                 costo_m.Text = habitacion.costo
-                estado_m.Text = habitacion.estado
-                tipo_m.Text = habitacion.tipo_habitacion
             Next
             Button2_ModalPopupExtender.Show()
         End If
@@ -94,8 +91,8 @@
             habitacion.metros = metros_m.Text
             habitacion.cantidad_camas = cantidad_m.Text
             habitacion.costo = costo_m.Text
-            habitacion.estado = estado_m.Text
-            habitacion.tipo_habitacion = tipo_m.Text
+            habitacion.estado = DropDownList4_m.SelectedItem.Value
+            habitacion.tipo_habitacion = "TP_matrimonial"
         Next
         Try
             nueva_habitacion.SubmitChanges()

@@ -75,7 +75,7 @@
                 codigo_m.Text = salon.codigo_salon
                 nombre_m.Text = salon.nombre
                 'DropDownList2.SelectedItem.Equals = salon.estado
-                ' costo_m.Text = salon.costo aca va el dropdownlis2
+                costo_m.Text = salon.costo
             Next
             Button2_ModalPopupExtender.Show()
         End If

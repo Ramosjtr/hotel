@@ -51,6 +51,7 @@
         For Each evento In datos
             evento.codigo_evento = codigo_m.Text
             evento.nombre = nombre_m.Text
+            evento.costo = costo_m.Text
         Next
         Try
             nuevo_evento.SubmitChanges()

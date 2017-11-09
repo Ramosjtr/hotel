@@ -80,7 +80,7 @@
                                    <div class="form-group">
                                     <label  class="col-sm-4 control-label">Contraseña:</label>
                                     <div class="col-sm-8">
-                                            <asp:TextBox ID="contraseña" runat="server" CssClass="estilo1"></asp:TextBox>
+                                            <asp:TextBox ID="contraseña" runat="server" CssClass="estilo1" type="password" ></asp:TextBox>
                                     </div>
                                  </div> 
                             </div> 
