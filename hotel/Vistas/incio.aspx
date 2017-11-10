@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Vista/Maestro.Master" CodeBehind="incio.aspx.vb" Inherits="hotel.incio" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Vistas/Maestro.Master" CodeBehind="incio.aspx.vb" Inherits="hotel.incio" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Slider -->
     <div id="demo-1" data-zs-src='["img/photos/img1.jpg", "img/photos/img2.jpg", "img/photos/img3.jpg", "img/photos/img4.jpg"]' data-zs-overlay="dots">
@@ -32,7 +33,7 @@
                                 <span class="price">RESTAURANTE</span>
                                 <h4>Lo mejor en platillos tipicos</h4>
                                 <h5>Platillos para toca ocasion</h5>
-                                <a href="details.html" class="btn btn-details">Mas Info</a>
+                                <a href="rasturante.aspx" class="btn btn-details">Mas Info</a>
                             </p>
                         </div>
                     </div>
@@ -47,7 +48,7 @@
                                 <span class="price">BAR</span>
                                 <h4>Excelentes vinos</h4>
                                 <h5>Zonas Fumadores</h5>
-                                <a href="details.html" class="btn btn-details">Mas Info</a>
+                                <a href="rasturante.aspx" class="btn btn-details">Mas Info</a>
                             </p>
                         </div>
                     </div>
@@ -62,7 +63,7 @@
                                 <span class="price">SALA DE CONVENCIONES</span>
                                 <h4>Preparativos especiales</h4>
                                 <h5>Todas las ocaciones</h5>
-                                <a href="details.html" class="btn btn-details">Mas Info</a>
+                                <a href="eventos.aspx" class="btn btn-details">Mas Info</a>
                             </p>
                         </div>
                     </div>
@@ -70,5 +71,7 @@
             </div>
         </div>
     </section>
+
+
 
 </asp:Content>

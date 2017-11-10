@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Vista/Maestro.Master" CodeBehind="rasturante.aspx.vb" Inherits="hotel.rasturante" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Vistas/Maestro.Master" CodeBehind="rasturante.aspx.vb" Inherits="hotel.rasturante" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section id="inner-headline">
         <div class="container">
@@ -27,7 +27,7 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="about-text">
                                 <h3>Restaurante "Las Delicias"</h3>
-                                <p>En un entorno tranquilo y luminoso, donde en cada detalle se plasan las tradiciones de nuestro pais. Restaurante "Las Delicias" ofrece una carta que destaca por sus platillos puramente Guatemltecos, inspirada en la rica tredicion de sabores de nuestra tierra. A ello se le suma una fabulosa cava con los mejores vinos de nuestro pais, una combinacion perfecta.</p>
+                                <p style="text-align: justify;">En un entorno tranquilo y luminoso, donde en cada detalle se plasan las tradiciones de nuestro pais. Restaurante "Las Delicias" ofrece una carta que destaca por sus platillos puramente Guatemltecos, inspirada en la rica tredicion de sabores de nuestra tierra. A ello se le suma una fabulosa cava con los mejores vinos de nuestro pais, una combinacion perfecta.</p>
                             </div>
                         </div>
                     </div>

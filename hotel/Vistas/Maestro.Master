@@ -1,4 +1,5 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Maestro.Master.vb" Inherits="hotel.Vista" %>
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Maestro.master.vb" Inherits="hotel.Maestro" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +10,12 @@
     <meta name="author" content="http://webthemez.com" />
     <!-- css -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../Content/materialize.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
     <link href="css/flexslider.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/zoomslider.css" />
     <link href="css/style.css" rel="stylesheet" />
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 
 </head>
 <body>
@@ -74,13 +70,11 @@
                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">EXPERIENCIA <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="waves-effect waves-dark" href="about.html">QUIENES SOMOS</a></li>
-                                    <li><a class="waves-effect waves-dark" href="#">INSTALACIONES</a></li>
-                                    <li><a class="waves-effect waves-dark" href="#">GALERIA DE FOTOS</a></li>
+                                    <li><a class="waves-effect waves-dark" href="galeria.aspx">GALERIA DE FOTOS</a></li>
                                 </ul>
                             </li>
 
-                            <li><a class="waves-effect waves-dark" href="pricing.html">REGISTRARSE</a></li>
-                            <li><a class="waves-effect waves-dark" href="contact.html">INICIAR SESION</a></li>
+                            <li><a class="waves-effect waves-dark" href="pricing.html">Reservar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,7 +82,6 @@
         </header>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-
         <section class="projects1">
             <div class="container">
                 <div class="row">
@@ -103,14 +96,14 @@
                     <div class="col-md-4 md-margin-bottom-40">
                         <div class="card small">
                             <div class="card-image">
-                                <img class="img-responsive" src="img/destacado1.jpg" alt="">
+                                <img class="img-responsive" src="img/destacado/1.jpg" alt="">
                             </div>
                             <div class="card-content">
                                 <p>
-                                    <span class="price">PAQUETE LOVE</span>
-                                    <h5>Decoraciones de habitacion y arreglos florales para ese momento tan especial con su pareja</h5>
+                                    <span class="price">NOCHE ROMATICA</span>
+                                    <h5>Decoraciones de habitacion y arreglos florales para ese momento de romance</h5>
                                     <h5>El amor en 4 paredes</h5>
-                                    <a href="plove.html" class="btn btn-details">Mas Info</a>
+                                    <a href="romance.aspx" class="btn btn-details">Mas Info</a>
                                 </p>
                             </div>
                         </div>
@@ -118,14 +111,14 @@
                     <div class="col-md-4 md-margin-bottom-40">
                         <div class="card small">
                             <div class="card-image">
-                                <img class="img-responsive" src="img/destacado2.jpg" alt="">
+                                <img class="img-responsive" src="img/destacado/2.jpg" alt="">
                             </div>
                             <div class="card-content">
                                 <p>
                                     <span class="price">NIÑOS NO PAGAN</span>
                                     <h5>Los niños menores de 12 años no pagan habitación, contamos con apartamentos especiales para estar en familia</h5>
                                     <h5>Apartamentos especiales</h5>
-                                    <a href="npagan.html" class="btn btn-details">Mas Info</a>
+                                    <a href="npagan.aspx" class="btn btn-details">Mas Info</a>
                                 </p>
                             </div>
                         </div>
@@ -133,7 +126,7 @@
                     <div class="col-md-4 md-margin-bottom-40">
                         <div class="card small">
                             <div class="card-image">
-                                <img class="img-responsive" src="img/destacado3.jpg" alt="">
+                                <img class="img-responsive" src="img/destacado/3.jpg" alt="">
                             </div>
                             <div class="card-content">
                                 <p>
@@ -148,7 +141,8 @@
                 </div>
             </div>
         </section>
-        <footer>
+    </div>
+    
             <div id="sub-footer">
                 <div class="container">
                     <div class="row">
@@ -175,10 +169,8 @@
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
-    <a href="#" class="scrollup waves-effect waves-dark"><i class="fa fa-angle-up HillSide"></i></a>
-    <!-- javascript
+    <!--<a href="#" class="scrollup waves-effect waves-dark"><i class="fa fa-angle-up HillSide"></i></a>
+     javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>

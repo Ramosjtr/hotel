@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Vista/Maestro.Master" CodeBehind="habitaciones.aspx.vb" Inherits="hotel.habitaciones" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Vistas/Maestro.Master" CodeBehind="habitaciones.aspx.vb" Inherits="hotel.habitaciones" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <section id="inner-headline">
+    <section id="inner-headline">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -14,7 +15,7 @@
             <div class="container">
                 <div class="row showcase-section">
                     <div class="col-md-6">
-                        <img src="img/dev1.jpg" alt="showcase image">
+                        <img src="img/habitaciones/habitacion0.jpg" alt="showcase image">
                     </div>
                     <div class="col-md-6">
                         <h3>Hermosas habitaciones y suites</h3>
@@ -64,7 +65,7 @@
                     <div class="col-md-4 md-margin-bottom-40">
                         <div class="card small">
                             <div class="card-image">
-                                <img class="img-responsive" src="img/habitacion1.jpg" alt="">
+                                <img class="img-responsive" src="img/habitaciones/habitacion1.jpg" alt="">
                             </div>
                             <div class="card-content">
                                 <p>
@@ -81,7 +82,7 @@
                     <div class="col-md-4 md-margin-bottom-40">
                         <div class="card small">
                             <div class="card-image">
-                                <img class="img-responsive" src="img/habitacion2.jpg" alt="">
+                                <img class="img-responsive" src="img/habitaciones/habitacion2.jpg" alt="">
                             </div>
                             <div class="card-content">
                                 <p>
@@ -98,7 +99,7 @@
                     <div class="col-md-4 md-margin-bottom-40">
                         <div class="card small">
                             <div class="card-image">
-                                <img class="img-responsive" src="img/habitacion3.jpg" alt="">
+                                <img class="img-responsive" src="img/habitaciones/habitacion3.jpg" alt="">
                             </div>
                             <div class="card-content">
                                 <p>
@@ -177,5 +178,6 @@
 
         </div>
     </section>
+
 
 </asp:Content>
